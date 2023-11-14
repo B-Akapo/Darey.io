@@ -8,3 +8,4 @@ The `sudo` command in Linux allows a permitted user to execute a command as the 
 
 `sudo apt upgrade`
 
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/sudo-command.png)
