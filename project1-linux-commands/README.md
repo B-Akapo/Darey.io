@@ -12,3 +12,22 @@ The `sudo` command in Linux allows a permitted user to execute a command as the 
 The `pwd` (print working directory) command in Linux and Unix-like operating systems displays the current working directory, showing the full path to the directory you are currently in.
 
 ![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/pwd.png)
+
+## 3. cd command
+The `cd` (change directory) command in Linux is used to navigate between directories, allowing users to change their current working directory. Simply type `cd <directoryname>` or `cd /path/to/directory`
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/cd-command.png)
+
+## 4. ls command
+The `ls` command in Linux is used to list the files and directories in the current working directory. The `ls` command default is to list all the files and subdirectories within a directory. However there are somany options you can attach to `ls`. For example:
+- `ls -a`: list all the files including the hidden files
+- `ls -l`: list all the file information including the permissions dates and owner
+- To learn more about the options use `man ls` or `info ls`
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/ls-command.png)
+
+## 5. cat command
+The cat command in Linux is used to concatenate and display the contents of files. It is also frequently used to create, append, and display the contents of files.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/cat-command.png)
+
