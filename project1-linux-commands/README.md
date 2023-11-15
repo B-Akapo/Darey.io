@@ -67,4 +67,20 @@ The `touch` command in Linux is used to create empty files or update the timesta
 
 ![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/touch-command.png)
 
+## 12. locate command
+The `locate` command in Linux is used to find the path of files and directories by searching an index/database of the file system.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/locate-command.png)
+
+## 13. find command
+The `find` command in Linux is used to search for files and directories within a specified directory hierarchy based on various criteria.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/find-command.png)
+
+## 14. grep command
+The `grep` command in Linux is used to search for specific patterns within files or streams of text, enabling filtering based on regular expressions.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/grep-command.png)
+
+**Note:** You can recursively search for the "pattern" within all files in the specified directory and its subdirectories using `grep -r "pattern" /path/to/directory`
 
