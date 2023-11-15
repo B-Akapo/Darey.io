@@ -31,3 +31,22 @@ The cat command in Linux is used to concatenate and display the contents of file
 
 ![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/cat-command.png)
 
+## 6. cp command
+The `cp` command in Linux is used to copy files and directories. you can copies files within the same directory or copy from one directory to another.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/cp-command.png)
+
+**Note:** To copy a directory and its contents recursively, use `cp -r sourcedirectory destination` (the -r is for recursive)
+
+## 7. mv command
+The `mv` command in Linux is used to move or rename files and directories.
+
+- `mv sourcefile destination` moves a file to a specified destination or renames the file if the destination is within the same directory.
+- `mv sourcedirectory destination` moves a directory to a specified destination or renames the directory if the destination is within the same parent directory.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/mv-command.png)
+
+## 8. mkdir command
+The mkdir command in Linux  is used to create new directories (folders).
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/mkdir-command.png)
