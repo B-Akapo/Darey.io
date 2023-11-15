@@ -47,6 +47,24 @@ The `mv` command in Linux is used to move or rename files and directories.
 ![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/mv-command.png)
 
 ## 8. mkdir command
-The mkdir command in Linux  is used to create new directories (folders).
+The mkdir command in Linux is used to create new directories (folders).
 
 ![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/mkdir-command.png)
+
+## 9. rmdir command
+The `rmdir` command in Linux  is used to remove empty directories.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/rmdir-command.png)
+
+## 10. rm command
+The rm command in Linuxis used to remove files and directories(that are not empty). The remove a non- empty directory, you use `rm -r`
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/rm-command.png)
+
+## 11. touch command
+
+The `touch` command in Linux is used to create empty files or update the timestamp of existing files.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/touch-command.png)
+
+
