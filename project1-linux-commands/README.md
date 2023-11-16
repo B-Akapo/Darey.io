@@ -222,5 +222,29 @@ The `echo` command in Linux is used to display text or variables to the terminal
 
 ![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/echo-command2.png)
 
+## 32. echo command
+The `zip` command in Linux is used to compress files into a ZIP archive format. While `unzip` is used to extract files from a ZIP archive.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/zip-unzip-command.png)
+
+## 32. hostname command
+The `hostname` command in Linux is used to display or set the system's hostname.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/hostname-command.png)
+
+## 32. useradd, userdel command
+The `useradd` command in Linux is used to add new user accounts to the system. While `userdel` command is used to delete user accounts from the system.
+
+I'd advice you to check the list of users first. you cando this using `cut -d: -f1 /etc/passwd`
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/useradd-command1.png)
+
+In the screenshot you can see my useer name `bunmi`. To add a new user run the command `useradd <username>` (replace username with the desired name). if you are not running the command as a root user then you will need to use `sudo useradd <username>`.
+
+Once you have created the new user you can run `cut -d: -f1 /etc/passwd` to see the new added user 
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/useradd-command1.png)
+
+
 
 
