@@ -239,7 +239,7 @@ I'd advice you to check the list of users first. you cando this using `cut -d: -
 
 ![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/useradd-command1.png)
 
-In the screenshot you can see my useer name `bunmi`. To add a new user run the command `useradd <username>` (replace username with the desired name). if you are not running the command as a root user then you will need to use `sudo useradd <username>`.
+In the screenshot you can see my useer name `bunmi`. To add a new user run the command `useradd <username>` (replace username with the desired name). if you are not running the command as a root user then you will need to use `sudo useradd <username>`. To give you new user a password run the command `sudo passwd <username>`. You will be prompter to enter the new password twice
 
 Once you have created the new user you can run `cut -d: -f1 /etc/passwd` to see the new added user. In the screenshot below you can see i added `guest` as the new user. 
 
