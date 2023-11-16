@@ -227,12 +227,12 @@ The `zip` command in Linux is used to compress files into a ZIP archive format. 
 
 ![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/zip-unzip-command.png)
 
-## 32. hostname command
+## 33. hostname command
 The `hostname` command in Linux is used to display or set the system's hostname.
 
 ![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/hostname-command.png)
 
-## 32. useradd, userdel command
+## 34. useradd, userdel command
 The `useradd` command in Linux is used to add new user accounts to the system. While `userdel` command is used to delete user accounts from the system.
 
 I'd advice you to check the list of users first. you cando this using `cut -d: -f1 /etc/passwd`
@@ -241,9 +241,12 @@ I'd advice you to check the list of users first. you cando this using `cut -d: -
 
 In the screenshot you can see my useer name `bunmi`. To add a new user run the command `useradd <username>` (replace username with the desired name). if you are not running the command as a root user then you will need to use `sudo useradd <username>`.
 
-Once you have created the new user you can run `cut -d: -f1 /etc/passwd` to see the new added user 
+Once you have created the new user you can run `cut -d: -f1 /etc/passwd` to see the new added user. In the screenshot below you can see i added `guest` as the new user. 
 
-![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/useradd-command1.png)
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/useradd-command2.png)
+
+To delete and existing user is easy. Simply run the command `userdel <username>`. If you aren't running the command as a root user, then you will need to run `sudo userdel <username>`. By default, the `userdel` command will remove the user from the system account files, deleting all entries that refer to the username. However, it will not delete the user's home directory or mail spool. If you want to remove the user's home directory and mail spool as well, you can use `sudo userdel -r <username>`
+
 
 
 
