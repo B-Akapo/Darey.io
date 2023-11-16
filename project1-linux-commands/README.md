@@ -1,3 +1,15 @@
+# Table Of Content
+1. [Introduction](https://github.com/B-Akapo/Darey.io/tree/main/project1-linux-commands#introduction-to-linux-and-its-commands)
+
+2. [File Manipulation](https://github.com/B-Akapo/Darey.io/tree/main/project1-linux-commands#file-manipulation)
+
+   - [sudo command](https://github.com/B-Akapo/Darey.io/tree/main/project1-linux-commands#1-sudo-command)
+   - [pwd command](https://github.com/B-Akapo/Darey.io/tree/main/project1-linux-commands#2-pwd-command)
+   - [cd command](https://github.com/B-Akapo/Darey.io/tree/main/project1-linux-commands#3-cd-command)
+
+3. [File Permissions and Ownership](https://github.com/B-Akapo/Darey.io/tree/main/project1-linux-commands#file-permissions-and-ownership)
+
+#
 # Introduction to Linux and Its Commands
 Linux is an open-source operating system kernel that serves as the foundation for various Unix-like operating systems. Known for its stability, security, and flexibility, Linux has become a popular choice for servers, embedded systems, and desktop environments.
 
