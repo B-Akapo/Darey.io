@@ -84,3 +84,19 @@ The `grep` command in Linux is used to search for specific patterns within files
 
 **Note:** You can recursively search for the "pattern" within all files in the specified directory and its subdirectories using `grep -r "pattern" /path/to/directory`
 
+## 15. df command
+The `df` command in Linux is used to display disk space usage information for filesystems.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/df-command.png)
+
+## 16. du command
+The `du` command in Linux is used to estimate file and directory space usage.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/du-command.png)
+
+## 17. head command
+The `head` command in Linux is used to display the first 10 fines of a file by default.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/head-command.png)
+
+**Note:** To display a specified number of lines use `head -n 10 filename` (Replace 10 with the desired number of lines.)
