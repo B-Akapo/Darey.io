@@ -203,6 +203,24 @@ The `top` command in Linux is used to display system processes in real-time, pro
 
 ![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/top-command.png)
 
+## 29. history command
+The `history` command in Linux is used to display a list of previously executed commands in the current shell session.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/history-command.png)
+
+## 30. man command
+The `man` command in Linux is used to display the manual pages (documentation) for various commands and functionalities within the system. For example `man ls` will give you the manual for the `ls` command
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/man-command.png)
+
+## 31. echo command
+The `echo` command in Linux is used to display text or variables to the terminal or standard output.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/echo-command1.png)
+
+`echo` can also be used to create a new file like the `touch` commmand. However, the files created by `echo` are not empty. that makes it different from `touch`. To use te echo command type `echo "<string>" > filename`. Becareful though, using echo again on the same file will overwrite what you previously saved. To avoid this use `echo "<string>" >> filename`. `>>` appends the new content to the last line instead of overwriting the whole file. 
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/echo-command2.png)
 
 
 
