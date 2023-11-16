@@ -6,6 +6,24 @@
    - [sudo command](https://github.com/B-Akapo/Darey.io/tree/main/project1-linux-commands#1-sudo-command)
    - [pwd command](https://github.com/B-Akapo/Darey.io/tree/main/project1-linux-commands#2-pwd-command)
    - [cd command](https://github.com/B-Akapo/Darey.io/tree/main/project1-linux-commands#3-cd-command)
+   - [ls command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#4-ls-command)
+   - [cat command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#5-cat-command)
+   - [cp command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#6-cp-command)
+   - [mv command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#7-mv-command)
+   - [mkdir command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#8-mkdir-command)
+   - [rmdir command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#9-rmdir-command)
+   - [rm command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#10-rm-command)
+   - [touch command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#11-touch-command)
+   - [locate command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#12-locate-command)
+   - [find command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#13-find-command)
+   - [grep command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#14-grep-command)
+   - [df command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#15-df-command)
+   - [du command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#16-du-command)
+   - [head command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#17-head-command)
+   - [tail command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#18-tail-command)
+   - [diff command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#19-diff-command)
+   - [diff command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#19-diff-command)
+   - [diff command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#19-diff-command)
 
 3. [File Permissions and Ownership](https://github.com/B-Akapo/Darey.io/tree/main/project1-linux-commands#file-permissions-and-ownership)
 
@@ -129,10 +147,10 @@ The `diff` command in Linux is used to compare and show the differences between 
 
 ![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/diff-command.png)
 
-# File Permissions and Ownership
-
 ## 20. tar command
 The tar command in Linux is used to create, view, extract, or manipulate tar archives, which are collections of files and directories bundled together into a single file. to create a **.tar** file, use `tar -cvf archive.tar files/directories`. To extract the files use `tar -xvf archive.tar`
+
+# File Permissions and Ownership
 
 ![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/tar-command.png)
 
