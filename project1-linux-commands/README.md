@@ -36,8 +36,17 @@
    - [history command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#29-history-command)
    - [man command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#30-man-command)
    - [echo command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#31-echo-command)
+   - [zip and unzip command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#32-zip-and-unzip-command)
+   - [hostname command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#33-hostname-command)
+   - [useradd. userdel command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#34-useradd-userdel-command)
+   - [apt-get command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#35-apt-get-command)
+   - [nano, vi, jed command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#36-nano-vi-jed-command)
+   - [alias and unalias command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#37-alias-and-unalias-command)
+   - [su command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#38-su-command)
+   - [htop command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#39-htop-command)
+   - [ps command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#40-ps-command)
 
-4. [Conclusion]()
+4. [Conclusion](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#conclusion)
 
 #
 # Introduction to Linux and Its Commands
