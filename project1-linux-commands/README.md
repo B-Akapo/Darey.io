@@ -247,6 +247,57 @@ Once you have created the new user you can run `cut -d: -f1 /etc/passwd` to see 
 
 To delete and existing user is easy. Simply run the command `userdel <username>`. If you aren't running the command as a root user, then you will need to run `sudo userdel <username>`. By default, the `userdel` command will remove the user from the system account files, deleting all entries that refer to the username. However, it will not delete the user's home directory or mail spool. If you want to remove the user's home directory and mail spool as well, you can use `sudo userdel -r <username>`
 
+## 35. apt-get command
+The `apt-get` command in Debian-based Linux distributions is used to manage software packages. It allows users to install, update, upgrade, and remove packages from the system. In the screenshot below you can see me using `apt-get` to instal `jed` package
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/apt-get-command.png)
+
+You can also use `apt-get` to:
+- Update the local package index by downloading the latest package lists from the repositories. This can be done using `sudo apt-get update`
+- Upgrade installed packages to their latest versions. This can be done by running `sudo apt-get upgrade`
+
+## 36. nano, vi, jed command
+**Nano** is a simple and user-friendly text editor often favored by beginners for its straightforward interface and keybindings. To use nano, you run `nano <filename>` (replace filename with the name of your file). 
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/nano-command.png)
+
+Once in nano text editor, you can exit using `Ctrl + X`, you will be asked if you want to save or not enter `Y` for yes and `N` for no. 
+
+**vi (or vim)** is a powerful and widely used text editor with a steep learning curve but efficient once mastered. Vim is an improved version of Vi. To use vi, you run `vi <filename>` (replace filename with the name of your file). 
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/vi-command.png)
+
+To exit vi or vim you first make sure you are in command mode by pressing the Esc key. Then you can:
+- Type `:q!` and press Enter to quit without saving any changes. This command discards any modifications made to the file.
+- Type `:wq` and press Enter to save the changes and quit. This command writes the changes to the file before exiting.
+- Alternatively, you can use the shortcut `Shift+zz` to save and quit. This command is equivalent to `:wq`.
+
+**jed** is a lightweight text editor known for its extensibility and suitability for programming tasks. To use vi, you run `jed <filename>` (replace filename with the name of your file). 
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/jed-command.png)
+
+To exit jed you first make sure you are in command mode by pressing the Esc key. Then you can:
+- Type `:q` and press Enter to quit Jed without saving any changes. This command discards any modifications made to the file.
+- Type `:wq` and press Enter to save the changes and quit Jed. This command writes the changes to the file before exiting.
+- Alternatively, you can use the shortcut `Ctrl+X Ctrl+C` to exit Jed. This command is equivalent to `:wq`.
+
+## 37. alias and unalias command
+The `alias` command in Linux is used to create custom shortcuts or aliases for longer commands. The syntax for alias is `alias shortcut_name='longer_command`. For exampl
+
+`alias b='bunmi'`
+
+In this case the command is **bunmi** which is long. I have replaced it with a shorter alias **b**. This means any time i want to run the command, I can simply type **b**
+
+The `unalias` command removes previously defined aliases, reverting them to their original command form. THe syntaxt is `unalias shortcut_name`. Using our example about, to revert to using **bunmi** as my command i simply run 
+
+`unalias b`
+
+
+
+
+
+
+
 
 
 
