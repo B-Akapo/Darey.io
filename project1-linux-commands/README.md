@@ -117,3 +117,27 @@ The `diff` command in Linux is used to compare and show the differences between 
 The tar command in Linux is used to create, view, extract, or manipulate tar archives, which are collections of files and directories bundled together into a single file. to create a **.tar** file, use `tar -cvf archive.tar files/directories`. To extract the files use `tar -xvf archive.tar`
 
 ![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/tar-command.png)
+
+## 21. chmod command
+The `chmod` command in Linux is used to change the permissions (read, write, execute) of files and directories.It uses symbolic or numeric representation to modify permissions, allowing users to control who can read, write, and execute files and directories.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/chmod-command.png)
+
+## 22. chown command
+The `chown` command in Linux is used to change the ownership of files and directories. For example:
+
+- To change ownership of a file or directory use `chown newowner filename/directoryname`. Replace `newowner` with the new owner's username or user ID and filename/directoryname with the target file or directory.
+
+`chown user1 file.txt` changes the owner of the file `file.txt` to `user1`.
+
+## 23. jobs command
+The `jobs` command in Unix-like operating systems is used to list the current jobs running in the background or suspended in the current shell session.
+
+`# List current jobs
+jobs`
+
+Running `jobs` displays a list of all background jobs spawned from the current shell session, along with their job IDs and status information. This command is particularly useful when multiple processes are running concurrently in the background, allowing users to monitor and manage them.
+
+
+
+
