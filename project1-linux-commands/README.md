@@ -9,6 +9,8 @@
 
 3. [File Permissions and Ownership](https://github.com/B-Akapo/Darey.io/tree/main/project1-linux-commands#file-permissions-and-ownership)
 
+4. [Conclusion]()
+
 #
 # Introduction to Linux and Its Commands
 Linux is an open-source operating system kernel that serves as the foundation for various Unix-like operating systems. Known for its stability, security, and flexibility, Linux has become a popular choice for servers, embedded systems, and desktop environments.
@@ -292,8 +294,35 @@ The `unalias` command removes previously defined aliases, reverting them to thei
 
 `unalias b`
 
+## 38. su command
+The `su` command in Linux is used to switch users or assume the identity of another user. The syntax is `su <username>`
 
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/su-command.png)
 
+To switch back to the original user, use the same command `su <username>` or simply type `exit`
+
+## 39. htop command
+The `htop` command in Linux is an interactive process viewer, providing a more user-friendly and feature-rich alternative to the traditional `top` command. Running `htop` in the terminal launches an interactive, color-coded process manager displaying system resource usage, CPU, memory, and a list of processes, allowing users to manage and monitor processes in a more intuitive manner. 
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/htop-command.png)
+
+To exit the htop screen, simply run `Ctrl + X`
+
+## 40. ps command
+The `ps` command in Linux is used to display information about active processes. Running `ps ` without any flags or arguments shows a snapshot of currently running processes on the system. The ps command offers various options to display specific information about processes, such as their IDs, states, resource usage, and more, depending on the specified flags.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/ps-command.png)
+
+# Conclusion
+Linux commands cover a wide spectrum, from navigation and file manipulation to system monitoring and administration. They form a robust toolkit, offering options for:
+- File management (**ls, cp, mv**),
+- System insights (**top, htop, ps**),
+- user management (**useradd, userdel, su**).
+- Software management (**apt-get, wegt**)
+- File management (**chmod, chown, namo, vi, jed**) and
+- Utility management (**tar, zip, and unzip**)
+
+With Linux, there's a command for almost every task, offering flexibility and efficiency in managing Linux systems, you just need to take time to learn and practice them
 
 
 
