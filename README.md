@@ -1,6 +1,6 @@
 # DevOps-HandsOn-Projects
 
-Welcome to the DevOps-HandsOn-Projects repository! This collection showcases the practical applications and hands-on projects I completed during my DevOps course on [darey.io](darey.io). Each project reflects a key aspect of DevOps methodologies, tools, and practices, providing a comprehensive demonstration of my skills gained through the course.
+Welcome to the DevOps-HandsOn-Projects repository! This collection showcases the practical applications and hands-on projects I completed during my DevOps course on [darey.io](https://www.darey.io/). Each project reflects a key aspect of DevOps methodologies, tools, and practices, providing a comprehensive demonstration of my skills gained through the course.
 
 ## Key Features
 - **Diverse Projects:** Explore a variety of hands-on projects covering essential DevOps concepts such as continuous integration, continuous deployment, infrastructure as code, and more.
