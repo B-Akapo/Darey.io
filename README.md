@@ -15,3 +15,5 @@ Feel free to dive into the projects, explore the code, and adapt the solutions t
 
 ## Project Directory
 1. **[project1-linux-commands](https://github.com/B-Akapo/Darey.io/tree/main/project1-linux-commands):** - In this initial project, I focused on elevating my command-line interface (CLI) skills, delving into the world of terminal commands, and learning efficient navigation within this environment. Take a look to explore the fundamental commands that have become the building blocks of my terminal proficiency.
+
+2. **[project2-git](https://github.com/B-Akapo/Darey.io/tree/main/project2-git):** - In this introductory project, I've immersed myself in the world of Git—a powerful version control system. I've dived into the basics, from initializing repositories and making commits to exploring branches and collaborating with others. This project is my gateway to understanding version control and mastering the essential commands that form the foundation of Git proficiency.
