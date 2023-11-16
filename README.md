@@ -14,4 +14,4 @@ Welcome to the DevOps-HandsOn-Projects repository! This collection showcases the
 Feel free to dive into the projects, explore the code, and adapt the solutions to your own DevOps endeavors. Your feedback and contributions are always welcome!
 
 ## Project Directory
-1. **[project1-linux-commands](https://github.com/B-Akapo/Darey.io/tree/main/project1):** - In this initial project, I focused on elevating my command-line interface (CLI) skills, delving into the world of terminal commands, and learning efficient navigation within this environment. Take a look to explore the fundamental commands that have become the building blocks of my terminal proficiency.
+1. **[project1-linux-commands](https://github.com/B-Akapo/Darey.io/tree/main/project1-linux-commands):** - In this initial project, I focused on elevating my command-line interface (CLI) skills, delving into the world of terminal commands, and learning efficient navigation within this environment. Take a look to explore the fundamental commands that have become the building blocks of my terminal proficiency.
