@@ -9,7 +9,68 @@ GitHub is a web-based platform built around Git that provides hosting for softwa
 
 # Getting Started
 
+## Sign Up For Github
+- Go to [GitHub's website](https://github.com/) using your web browser.
+- Click on the "Sign Up" button located in the upper right corner of the GitHub homepage.
+- Fill in the required fields in the sign-up form:
+      a. Username
+      b. Email Address: Enter your email address.
+      c. Password
+- Select your preferred plan. GitHub offers free plans for public repositories and paid plans with additional features for private repositories. Honestly the free plan is okay
+- After signing up, GitHub will send a verification email to the address you provided. Check your inbox and click the verification link in the email to verify your email address.
+- Once verified, you'll be redirected to GitHub. Complete any additional setup steps or profile settings if prompted.
+
+
 ## Installing Git on Ubuntu
 **Step 1: Update Package Lists**
 - Open a terminal (Ctrl + Alt + T) and update the package lists using `sudo apt update`. if there are any updates needed run `sudo apt upgrade`
-- 
+
+**Step 2: Install Git**
+- Install Git by running `sudo apt install git`
+- Check if Git has been installed successfully by verifying the version using `git --version`
+
+**Step 3: Configure Git**
+- Set up your Git username and email. Prferably use the username and email you used to sign up for github earlier
+
+```
+# set up username
+git config --global user.name "Your Name"
+
+# set up email
+git config --global user.email "your.email@example.com"
+```
+## Initialising A Git Repository On Your Local Machine
+**Step 1: Open Terminal**
+- Open your terminal application. You can use Ctrl + Alt + T as a shortcut on Ubuntu.
+
+**Step 2: Navigate to the Desired Location**
+- Navigate to the location where you want to create the "devops" directory. Use the `cd` command to change directories. For example: `cd /home/bunmi/study/`
+
+It can be any directory of your choice. If you are new to linux, [click here](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md) to learn more about linux and how to navigate your way
+
+**Step 3: Create the Directory**
+- Create a new directory named "devops" (you can choose any name you want) using the `mkdir` command. This command creates a new directory named "devops" in your current location. Once done, `cd` into the new directory
+
+```
+# Create a new directory
+mkdir devops
+
+# Change into the directory
+cd devops
+```
+**Step 5: Initialize Git**
+- Initialize the directory as a Git repository using the git init command
+
+```
+# Initialise a repository
+git init
+```
+**Step 6: Verify Initializatio**n
+- To verify that Git has been initialized successfully, you can run
+```
+# Verify repositories status
+git status
+```
+
+ 
+
