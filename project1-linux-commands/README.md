@@ -179,6 +179,29 @@ The `ping` command in Linux is used to test network connectivity by sending ICMP
 
 ![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/ping-command.png)
 
+## 26. weget command
+The `wget` command in Linux is used to retrieve files from the internet via various protocols, including HTTP, HTTPS, FTP, and more.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/weget-command.png)
+
+**Note:** 
+- To download a zipped file from a specified url use `wget https://example.com/file.zip`
+- `wget -O output_file https://example.com/file` downloads the file from the URL and saves it with the specified name output_file.
+
+## 27. uname command
+The `uname` command in Linux is used to display system information, including the system name, kernel version, hardware architecture, and more.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/uname-command.png)
+
+Some options to use for `uname` are:
+- `uname -a` provides comprehensive system information, including the kernel name, network node hostname, kernel release, kernel version, machine hardware name, and the operating system
+- `uname -s` is used to display the operating system name
+- is used to display the network node hostname of the system. It retrieves and displays the name assigned to the system on the network.
+
+## 28. top command
+The `top` command in Linux is used to display system processes in real-time, providing a dynamic, interactive view of system resource usage. Running `top` in the terminal presents a live, updating list of processes, showing information such as CPU usage, memory usage, process IDs (PIDs), running time, and more. It's a powerful tool for monitoring system performance and identifying resource-intensive processes.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/top-command.png)
 
 
 
