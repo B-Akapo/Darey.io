@@ -22,10 +22,20 @@
    - [head command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#17-head-command)
    - [tail command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#18-tail-command)
    - [diff command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#19-diff-command)
-   - [diff command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#19-diff-command)
-   - [diff command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#19-diff-command)
+   - [tar command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#20-tar-command)
 
 3. [File Permissions and Ownership](https://github.com/B-Akapo/Darey.io/tree/main/project1-linux-commands#file-permissions-and-ownership)
+   - [chmod command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#21-chmod-command)
+   - [chown command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#22-chown-command)
+   - [jobs command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#23-jobs-command)
+   - [kill command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#24-kill-command)
+   - [ping command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#25-ping-command)
+   - [weget command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#26-weget-command)
+   - [uname command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#27-uname-command)
+   - [top command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#28-top-command)
+   - [history command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#29-history-command)
+   - [man command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#30-man-command)
+   - [echo command](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/README.md#31-echo-command)
 
 4. [Conclusion]()
 
