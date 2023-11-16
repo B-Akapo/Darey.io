@@ -138,6 +138,32 @@ jobs`
 
 Running `jobs` displays a list of all background jobs spawned from the current shell session, along with their job IDs and status information. This command is particularly useful when multiple processes are running concurrently in the background, allowing users to monitor and manage them.
 
+## 24. kill command
+The `kill` command in Linux is used to terminate processes by sending a signal to a specified process ID (PID) or job.
+
+**Code snippet example:**
+```
+# Terminate a process by PID
+kill PID
+
+# Forcefully terminate a process by PID
+kill -9 PID
+```
+
+Replace PID with the process ID of the target process.
+
+- The first example (kill PID) sends the default **SIGTERM** signal to the specified process, allowing it to perform cleanup before termination.
+- The second example (kill -9 PID) sends the **SIGKILL** signal, forcibly terminating the specified process without allowing it to perform any cleanup tasks. Use this cautiously as it immediately ends the process.
+
+`kill` provides a means to manage running processes by stopping or ending them based on their process IDs.
+
+
+## 25. ping command
+The `ping` command in Linux is used to test network connectivity by sending ICMP echo request packets to a target host and waiting for replies. For example `ping google.com`
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/ping-command.png)
+
+
 
 
 
