@@ -252,7 +252,7 @@ The `echo` command in Linux is used to display text or variables to the terminal
 
 ![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/echo-command2.png)
 
-## 32. echo command
+## 32. zip and unzip command
 The `zip` command in Linux is used to compress files into a ZIP archive format. While `unzip` is used to extract files from a ZIP archive.
 
 ![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/zip-unzip-command.png)
