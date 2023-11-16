@@ -73,5 +73,16 @@ git status
 ```
 ![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/initialising-git.png)
 
- 
+## Your First Commit
+**Step 1: Create a File**
+In your current working directory create a file (_I am creating names.txt, you can choose any file name you want_). Use `touch` to creat an empty file. You can open the file using `open` command to write anything you want inside the file. 
+
+```
+# Create empty file
+touch names.txt
+
+# Open file and type in it
+open names.txt
+```
+
 
