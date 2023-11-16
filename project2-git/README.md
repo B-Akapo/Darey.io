@@ -101,7 +101,7 @@ git add names.txt
 ```
 The staging area in Git acts as a middle ground between your working directory and the committed changes in your repository. It's a space where you prepare changes before they're permanently saved (committed) to the Git repository. Files added to the staging area are now _**tracked**_ by Git. 
 
-![Alt text]()
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/untracked-file.png)
 
 There are several ways to stage your files/directories other than `git add <filename>`. You can also use `git add .` to stage all the untracked files in that working directory or `git add --all`, to stage all the file in all the branches.
 
@@ -121,7 +121,7 @@ git status
 #Check that commit was logged
 git log
 ```
-![Alt text]()
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/initial-commit.png)
 
 
 
