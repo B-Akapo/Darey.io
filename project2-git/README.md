@@ -71,6 +71,7 @@ git init
 # Verify repositories status
 git status
 ```
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/initialising-git.png)
 
  
 
