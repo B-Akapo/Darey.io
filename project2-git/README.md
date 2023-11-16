@@ -75,6 +75,7 @@ git status
 
 ## Your First Commit
 **Step 1: Create a File**
+
 In your current working directory create a file (_I am creating names.txt, you can choose any file name you want_). Use `touch` to creat an empty file. You can open the file using `open` command to write anything you want inside the file. 
 
 ```
@@ -85,6 +86,7 @@ touch names.txt
 open names.txt
 ```
 **Step 2: Check File Status**
+
 Check the status of the file and verify that Git recognizes it as an untracked file:
 
 ![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/untracked-file.png)
@@ -93,6 +95,7 @@ Check the status of the file and verify that Git recognizes it as an untracked f
 - **Untracked File:** An untracked file is a file in the working directory that Git is not currently managing or tracking. These files are not included in Git's version control system. Git does not actively follow changes made to untracked files, and they do not appear in commits until they are explicitly added to the staging area.
 
 **Step 3: Add File to Staging Area**
+
 Add file to the staging area using the `git add` command
 
 ```
@@ -106,6 +109,7 @@ The staging area in Git acts as a middle ground between your working directory a
 There are several ways to stage your files/directories other than `git add <filename>`. You can also use `git add .` to stage all the untracked files in that working directory or `git add --all`, to stage all the file in all the branches.
 
 **Step 4: Make Your First Commit**
+
 Commit the changes to the repository along with a descriptive commit message using
 ```
 git commit -m "Initial Commit"
@@ -113,6 +117,7 @@ git commit -m "Initial Commit"
 **A commit** in Git represents a snapshot of changes made to files in a repository at a specific point in time. It's a fundamental action that records the changes you've staged in the staging area to the repository's history. The commit message is a brief description that explains the changes made in that particular commit. It's essential to provide clear and descriptive commit messages, summarizing the purpose of the changes or the problem they address.
 
 **Step 5: Verify Commit**
+
 Verify that the commit was successful using
 ```
 # Check status of repo
