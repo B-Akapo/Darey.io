@@ -3,6 +3,8 @@ Linux is an open-source operating system kernel that serves as the foundation fo
 
 Linux commands are essential tools for interacting with the operating system. They provide users with the ability to navigate the file system, manage processes, configure system settings, and perform a wide range of tasks. Understanding Linux commands is crucial for both beginners and experienced users, as it empowers efficient system administration and customization. This project will cover fundamental commands to help users navigate and harness the power of Linux effectively.
 
+# File Manipulation
+
 ## 1. sudo command
 The `sudo` command in Linux allows a permitted user to execute a command as the superuser or another user, as specified by the security policy. It is commonly used to perform administrative tasks that require elevated privileges. for example: `sudo apt upgrade`
 
@@ -112,6 +114,8 @@ The tail command in Linux is used to display the ending part of files, typically
 The `diff` command in Linux is used to compare and show the differences between two files line by line.
 
 ![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/diff-command.png)
+
+# File Permissions and Ownership
 
 ## 20. tar command
 The tar command in Linux is used to create, view, extract, or manipulate tar archives, which are collections of files and directories bundled together into a single file. to create a **.tar** file, use `tar -cvf archive.tar files/directories`. To extract the files use `tar -xvf archive.tar`
