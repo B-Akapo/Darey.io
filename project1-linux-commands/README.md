@@ -100,3 +100,20 @@ The `head` command in Linux is used to display the first 10 fines of a file by d
 ![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/head-command.png)
 
 **Note:** To display a specified number of lines use `head -n 10 filename` (Replace 10 with the desired number of lines.)
+
+## 18. tail command
+The tail command in Linux is used to display the ending part of files, typically the last 10 lines.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/tail-command.png)
+
+**Note:** To display a specified number of lines use `tail -n 10 filename` (Replace 10 with the desired number of lines.)
+
+## 19. diff command
+The `diff` command in Linux is used to compare and show the differences between two files line by line.
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/diff-command.png)
+
+## 20. tar command
+The tar command in Linux is used to create, view, extract, or manipulate tar archives, which are collections of files and directories bundled together into a single file. to create a **.tar** file, use `tar -cvf archive.tar files/directories`. To extract the files use `tar -xvf archive.tar`
+
+![Alt Text](https://github.com/B-Akapo/Darey.io/blob/main/project1-linux-commands/images/tar-command.png)
