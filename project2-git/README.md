@@ -94,6 +94,8 @@ Check the status of the file and verify that Git recognizes it as an untracked f
 - **Tracked File:** A tracked file in Git is a file that Git is aware of and is being managed within the repository.
 - **Untracked File:** An untracked file is a file in the working directory that Git is not currently managing or tracking. These files are not included in Git's version control system. Git does not actively follow changes made to untracked files, and they do not appear in commits until they are explicitly added to the staging area.
 
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/untracked-file.png)
+
 **Step 3: Add File to Staging Area**
 
 Add file to the staging area using the `git add` command
@@ -104,7 +106,7 @@ git add names.txt
 ```
 The staging area in Git acts as a middle ground between your working directory and the committed changes in your repository. It's a space where you prepare changes before they're permanently saved (committed) to the Git repository. Files added to the staging area are now _**tracked**_ by Git. 
 
-![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/untracked-file.png)
+![Alt text](add to staging area)
 
 There are several ways to stage your files/directories other than `git add <filename>`. You can also use `git add .` to stage all the untracked files in that working directory or `git add --all`, to stage all the file in all the branches.
 
@@ -127,6 +129,77 @@ git status
 git log
 ```
 ![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/initial-commit.png)
+
+## Working With Branches
+Step 1: Check you branches
+
+In your current working directory before you start working with branches, you can check how many branches you are currently working using the command `git branch`. Running this command will show you how many branched you are working with. In this case we will have only on branch **"main/master"** since we havent created any new branch.
+
+**Step 2: Create a new branch**
+
+To create a new branch is simple. The syntaxt is `git branch <branch name>`
+```
+# Create a new branch
+git branch UpdateList
+```
+Now you can run te `git branch` command agin. this time you should see two branches:
+1. main/master
+2. UpdateList
+
+Take note, the branch that is highlighted in green and asterixed is the branch you are currently working in. 
+
+![Alt text](number-of-branches)
+
+**Step 3: Switch Between Branches**
+
+Switching between branches is very easy. you simply use `git switch <branch name>`
+```
+# Switch branches
+git swith UpdateList
+```
+if you run `git branch` now, you will see that **UpdateList** is now highlighted and green and has an asterix. This means you are now working in that branch.
+
+**Step 4: Make Changes in the "UpdateList" Branch**
+
+Now we are going to make changes to our list. For me I am adding to new names to the `names.txt` file is the **UpdateList** Branch. Just like before you do this by running `open` command, make your modification and save.
+```
+# Open File
+open names.txt
+```
+
+**Step 5: Stage and Commit Changes in the "UpdateList" Branch**
+
+Remember to always stage and commit your modifications, then switch back to the master/main branch
+```
+# Stage Modification
+git add names.txt
+
+# Commit
+git commit -m "Update list of names in UpdateList branch"
+
+# Swith Branches
+git switch master
+```
+
+**Step 6: Stage and Commit Changes in the "UpdateList" Branch**
+
+Merge the changes from the "UpdateList" branch into the main branch. 
+```
+git merge UpdateList
+```
+![Alt text](merge branch)
+
+If you open **names.txt** now after the merge, you will see that modification for** UpdateList** branch in the **main/master** branch. 
+
+**Step 7: Delete the "UpdateList" Branch**
+There is no need to keep branches once you are done, delete the branch
+```
+git branch -d UpdateList
+```
+If you run `git branch` now, you will see there is only one branch. 
+
+
+
 
 
 
