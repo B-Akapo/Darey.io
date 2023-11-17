@@ -213,15 +213,15 @@ Working with a repository in Github is just great. It allows for easy and effici
   
 - **Step 2:** On the landing page, towards the left side of the screen where there is **"top repositories"** you will see the icon to create a new repo. Click on it
 
-![Alt text](landing-page)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/landing-page.png)
 
 - **Step 3:** The next page will take you to where you can create the new repository. Enter the name of the repository and a brief description. Leave every other thing as it is for now scroll down and click on `create repository
 
-![Alt text](new-repo-form)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/new-repo-form.png)
 
 - **Step 4:** On the next page you will 3 options on how to have a repo on Github. For now we are sticking to **"push an existing repository from the command line"**. Remember we already have an existing repo on our local machine that we have been working on that is also called **"devops"**.
 
-![Alt text](push-local-repo)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/push-local-repo.png)
 
 - **Step 5:** Copy the codes as they are on the page
 
@@ -231,16 +231,30 @@ Second, run the command `git branch -M main`
 
 Lastly, run the comman `git push -u origin main`
 
-![Alt text](local-machine)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/local-machine.png)
 
 Voila! You are done. refresh your github page and you should see the file you created there.
 
-![Alt text](devops-repo)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/devops-repo.png)
 
 
 ### Cloning A Github Repo In A Local Machine
 
-- Step 1: Go to your terminal and navigate to the directory you want to clone the repo. We will cloning the same repo but in a different direcctory. For me I will be cloning it
+- **Step 1:** Go to your terminal and navigate to the directory you want to clone the repo. We will be cloning the same repo but in a different direcctory. For me I will be cloning it in my desktpo `/home/bunmi/Desktop`
+
+- **Step 2:** Go to the Github repo you wish to clone. On the Page you will see a `code` button. Make sure you are under **"local"** and that you are using **"HTTPS"**. If you want to use **"SSH"**, use this [Github documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) to first set up you SSH key _**before going to the next step**_. copy the link there.
+
+![Alt text](code-link)
+
+- On your terminal run the command
+```
+git clone https://github.com/B-Akapo/devops.git
+```
+This is the link you copied earlier from your Github repo. Remember your link will be unique to you. And that's it you have successfully cloned the repo into you machine. If you run the `ls` command, you will see you newly cloned repo there. You can `cd` into it and start working. Remember to always stage and commit your modifications using `git add` and `git commit`
+
+![Alt text](git-clone)
+
+
 
 
 
