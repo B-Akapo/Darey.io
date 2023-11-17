@@ -106,7 +106,7 @@ git add names.txt
 ```
 The staging area in Git acts as a middle ground between your working directory and the committed changes in your repository. It's a space where you prepare changes before they're permanently saved (committed) to the Git repository. Files added to the staging area are now _**tracked**_ by Git. 
 
-![Alt text](add to staging area)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/add-to-staging-area.png)
 
 There are several ways to stage your files/directories other than `git add <filename>`. You can also use `git add .` to stage all the untracked files in that working directory or `git add --all`, to stage all the file in all the branches.
 
@@ -131,7 +131,10 @@ git log
 ![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/initial-commit.png)
 
 ## Working With Branches
-Step 1: Check you branches
+
+Think of a branch in Git as a separate path or direction for your project's development. It's like taking a different road while still knowing where the main road is. Imagine you're working on a project. You create a branch to try out a new idea or fix something. This branch lets you make changes without affecting the main version of your project. It's like having a sandbox to play around in without changing the playground.
+
+**Step 1: Check you branches**
 
 In your current working directory before you start working with branches, you can check how many branches you are currently working using the command `git branch`. Running this command will show you how many branched you are working with. In this case we will have only on branch **"main/master"** since we havent created any new branch.
 
@@ -148,7 +151,7 @@ Now you can run te `git branch` command agin. this time you should see two branc
 
 Take note, the branch that is highlighted in green and asterixed is the branch you are currently working in. 
 
-![Alt text](number-of-branches)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/number-of-branches.png)
 
 **Step 3: Switch Between Branches**
 
@@ -187,7 +190,7 @@ Merge the changes from the "UpdateList" branch into the main branch.
 ```
 git merge UpdateList
 ```
-![Alt text](merge branch)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/merge-branch.png)
 
 If you open **names.txt** now after the merge, you will see that modification for** UpdateList** branch in the **main/master** branch. 
 
@@ -197,6 +200,51 @@ There is no need to keep branches once you are done, delete the branch
 git branch -d UpdateList
 ```
 If you run `git branch` now, you will see there is only one branch. 
+
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/branches.png)
+
+## Working With Repository In Github
+Working with a repository in Github is just great. It allows for easy and efficient remote collaboration with other developers. FOr this project, we will focus on two ways of working remotely;
+1. Pushing the repository from your local repo on your system
+2. Cloning an existing repo from Github into your LOCAL machine
+
+### Pushing Local Repo To Github
+- **Step 1:** Sign into you Github account with your credientials you used to signup with earlier
+  
+- **Step 2:** On the landing page, towards the left side of the screen where there is **"top repositories"** you will see the icon to create a new repo. Click on it
+
+![Alt text](landing-page)
+
+- **Step 3:** The next page will take you to where you can create the new repository. Enter the name of the repository and a brief description. Leave every other thing as it is for now scroll down and click on `create repository
+
+![Alt text](new-repo-form)
+
+- **Step 4:** On the next page you will 3 options on how to have a repo on Github. For now we are sticking to **"push an existing repository from the command line"**. Remember we already have an existing repo on our local machine that we have been working on that is also called **"devops"**.
+
+![Alt text](push-local-repo)
+
+- **Step 5:** Copy the codes as they are on the page
+
+First, run the command `git remote add origin git@github.com:B-Akapo/devops.git` in the repo you have been working on all this time. Note that for you this will have your own username 
+
+Second, run the command `git branch -M main`
+
+Lastly, run the comman `git push -u origin main`
+
+![Alt text](local-machine)
+
+Voila! You are done. refresh your github page and you should see the file you created there.
+
+![Alt text](devops-repo)
+
+
+### Cloning A Github Repo In A Local Machine
+
+- Step 1: Go to your terminal and navigate to the directory you want to clone the repo. We will cloning the same repo but in a different direcctory. For me I will be cloning it
+
+
+
+
 
 
 
