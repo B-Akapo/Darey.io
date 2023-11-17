@@ -259,7 +259,7 @@ Voila! You are done. refresh your github page and you should see the file you cr
 
 - **Step 2:** Go to the Github repo you wish to clone. On the Page you will see a `code` button. Make sure you are under **"local"** and that you are using **"HTTPS"**. If you want to use **"SSH"**, use this [Github documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) to first set up you SSH key _**before going to the next step**_. copy the link there.
 
-![Alt text]([code-link](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/code-link.png))
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/code-link.png)
 
 - On your terminal run the command
 ```
