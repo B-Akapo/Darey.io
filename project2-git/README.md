@@ -1,3 +1,18 @@
+# Table Of Content
+1. [Introduction](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/README.md#introduction)
+2. [What is Git?](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/README.md#what-is-git)
+3. [What is Github?](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/README.md#what-is-github)
+3. [Getting Started](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/README.md#getting-started)
+
+   - [Sign Up For Gitub](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/README.md#sign-up-for-github)
+   - [Installing Git On Ubuntu](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/README.md#installing-git-on-ubuntu)
+   - [Instalising A Git Repo On Your Local Machine](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/README.md#initialising-a-git-repository-on-your-local-machine)
+   - [Your First Commit](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/README.md#your-first-commit)
+   - [Working With Branches](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/README.md#working-with-branches)
+   - [Working With A Repository in Github](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/README.md#working-with-repository-in-github)
+     * [Pushing Local Repo To Github](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/README.md#pushing-local-repo-to-github)
+     * [Cloning A Repo](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/README.md#cloning-a-github-repo-in-a-local-machine)
+
 # Introduction
 This repository serves as a playground for my journey into the world of Git and GitHub. Here, I explore the power of version control using Git, mastering essential commands for tracking changes, branching, and collaborating effectively. Through this project, I'm honing my skills in managing and sharing code while leveraging the collaborative potential of GitHub. Join me as I navigate through the fundamentals of version control and explore the possibilities offered by Git and GitHub.
 
@@ -244,7 +259,7 @@ Voila! You are done. refresh your github page and you should see the file you cr
 
 - **Step 2:** Go to the Github repo you wish to clone. On the Page you will see a `code` button. Make sure you are under **"local"** and that you are using **"HTTPS"**. If you want to use **"SSH"**, use this [Github documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) to first set up you SSH key _**before going to the next step**_. copy the link there.
 
-![Alt text](code-link)
+![Alt text]([code-link](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/code-link.png))
 
 - On your terminal run the command
 ```
@@ -252,18 +267,4 @@ git clone https://github.com/B-Akapo/devops.git
 ```
 This is the link you copied earlier from your Github repo. Remember your link will be unique to you. And that's it you have successfully cloned the repo into you machine. If you run the `ls` command, you will see you newly cloned repo there. You can `cd` into it and start working. Remember to always stage and commit your modifications using `git add` and `git commit`
 
-![Alt text](git-clone)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project2-git/images/git-clone.png)
