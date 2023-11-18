@@ -47,3 +47,47 @@ To get started with Amazon Web Services (AWS), you can sign up for an AWS accoun
    - Use SSH to connect to your instance using the provided public IP address.
 
 For detailed step-by-step instructions on setting up an EC2 instance, refer to the AWS documentation [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html). Or you can watch [this](https://www.youtube.com/watch?v=osqZnijkhtE&t=5s) beginner friendly video.
+
+# Connecting To Your EC2 Instance From Your Local Machine
+Now that you have your EC2 instance running, let's access it from your local machine. 
+
+**1. Open Terminal**
+- On Linux OS, open the terminal application. use the shortcut `Ctrl + Alt + T`.
+
+**2. Navigate to the Directory Where the PEM Key is Stored**
+- while setting up the keypair for your intance on AWS, you downloaded a `.pem` file. Usually, it will be in the download folder. I will advice that you move it to another directory. In my own case I am putting it in `~/study/lamp-practice`. You can run the `ls` command to make sure it is there
+
+![Alt text](pem-file)
+
+3. Set Permissions for the PEM Key
+- Set appropriate permissions to the key file. The syntaxt is
+ ```
+ chmod 400 <your-key>.pem
+ ```
+![Alt text](pem-permission)  
+
+Dont worry if you don't see anything on the screen. It means it worked. `chmod 400` sets the permissions so that only the owner of the file has read access, while all other users (group and others) have no permissions to read, write, or execute the file. To see if your permission is set run the comman `ls -al` on your terminal 
+
+![Alt text](check-pem-permission) 
+
+**4. Connect To EC2 Using SSH**
+- In the terminal, use SSH to connect to your EC2 instance using the syntax
+```
+ssh -i /path/to/your-key.pem ec2-user@your-ec2-public-ip
+```
+Dont worry if you dont remeber it. It is easy to get.
+   * First got to your AWS console and go to `instances`
+   * MAke sure the instance you want is selected and the click on `connect`
+     
+![Alt text](instance-check) 
+
+   * While in connection dashboard, go to `SSH Client`, copy the whole code under "Example" and paste in your terminal and hit enter.
+     
+![Alt text](client-ssh) 
+
+And that's it, you are now connected to your EC2 instance on your local machine. 
+
+![Alt text](connected) 
+
+
+
