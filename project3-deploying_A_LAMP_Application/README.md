@@ -57,37 +57,144 @@ Now that you have your EC2 instance running, let's access it from your local mac
 **2. Navigate to the Directory Where the PEM Key is Stored**
 - while setting up the keypair for your intance on AWS, you downloaded a `.pem` file. Usually, it will be in the download folder. I will advice that you move it to another directory. In my own case I am putting it in `~/study/lamp-practice`. You can run the `ls` command to make sure it is there
 
-![Alt text](pem-file)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/pem-file.png)
 
 3. Set Permissions for the PEM Key
 - Set appropriate permissions to the key file. The syntaxt is
  ```
+# Set Permission
  chmod 400 <your-key>.pem
  ```
-![Alt text](pem-permission)  
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/pem-permission.png)  
 
 Dont worry if you don't see anything on the screen. It means it worked. `chmod 400` sets the permissions so that only the owner of the file has read access, while all other users (group and others) have no permissions to read, write, or execute the file. To see if your permission is set run the comman `ls -al` on your terminal 
 
-![Alt text](check-pem-permission) 
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/check-pem-permission.png) 
 
 **4. Connect To EC2 Using SSH**
 - In the terminal, use SSH to connect to your EC2 instance using the syntax
 ```
+# Connect to EC2 instance
 ssh -i /path/to/your-key.pem ec2-user@your-ec2-public-ip
 ```
 Dont worry if you dont remeber it. It is easy to get.
    * First got to your AWS console and go to `instances`
    * MAke sure the instance you want is selected and the click on `connect`
      
-![Alt text](instance-check) 
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/instance-check.png) 
 
-   * While in connection dashboard, go to `SSH Client`, copy the whole code under "Example" and paste in your terminal and hit enter.
+   * While in connection dashboard, go to `SSH Client`, copy the whole code under "Example" and paste in your terminal and hit enter. You'll see a command line prompt for your instance, indicating a successful connection.
      
-![Alt text](client-ssh) 
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/client-ssh.png) 
 
 And that's it, you are now connected to your EC2 instance on your local machine. 
 
-![Alt text](connected) 
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/connected.png) 
 
+# Installing Apache
+Now that we have our instance running on our local machine it is time to install Apache
 
+Apache HTTP Server, commonly known as Apache, is one of the most widely used open-source web server software globally. It's renowned for its reliability, flexibility, and robust performance in serving web content. It is the go-to choice for hosting websites, serving web applications, and managing web content due to its stability, versatility, and extensive community support.
 
+**1. Update and Upgrade Package Lists**
+- Update the package lists to ensure you have the latest information about available packages
+```
+# Update package list
+sudo apt upgrade
+
+# Upgrade package list
+sudo apt upgrade
+```
+Better still you can run the two at once by using `sudo apt update && sudo apt upgrade -y`. The why stands for yes and just means you want to go ahead with the upgrade
+
+![Alt text](upgrade-package) 
+
+**2. Install Apache**
+- Install the Apache package using `apt`
+```
+# Install Apache
+sudo apt install apache2
+```
+
+![Alt text](install-apache) 
+
+**3. Check Apache Service Status**
+- To confirm that Apache is running as a service
+```
+# Check apache service
+sudo systemctl status apache2
+```
+Once you see green and active, you are good to go. 
+
+![Alt text](apache-service) 
+
+**4. Open TCP port 80**
+
+Port 80 is the default port web browsers use to access web pages.
+   * Go back to "instances" on your AWS console.
+   * Click on security and then "security group". Please make sure you select the right instance
+     
+![Alt text](security-group) 
+
+   * In the "Security" page click on "Edit in0bound rules"
+     
+![Alt text](inbound-rules)
+
+   * click on **"Add rule"** set up the following:
+
+      a. set "Type" to "HTTP"
+
+      b. set "Protocol" to "TCP"
+
+      C. set "Port range" to "80"
+
+      d. set source to 0.0.0.0/0
+
+      e. save rules
+     
+![Alt text](set-up-inbound-rules)
+
+**5. Check Port In Local Machine**
+- To ensure you have access to the port, run the following command
+```
+$ curl http://localhost:80
+```
+or 
+```
+$ curl http://127.0.0.1:80
+```
+The two commands will give the same output which is the raw HTML code of the website. THe first command uses the `DNS name`. The second comand uses the `IP Address`
+
+![Alt text](port-80)
+
+**6. Access Apache Server On Browser**
+
+NOw instead of using the HTML file. Let's access the file on our browser
+- To get your IP run the following command
+```
+curl -s http://169.254.169.254/latest/meta-data/public-ipv4
+```
+or run
+```
+curl ifconfig.me
+```
+
+![Alt text](address)
+
+- Or you can just go to your AWS console and scroll to the right and find your public IP address
+
+![Alt text](address2)
+
+- Once you have your IP you can just copy it into the browser or use `http://<Public-IP-Address>:80` and you should be able to access the site. 
+
+![Alt text](apache-page)
+
+**7. Managing Apache**
+- To start, stop, or restart Apache, use these commands:
+```
+sudo systemctl start apache2     # Start Apache
+sudo systemctl stop apache2      # Stop Apache
+sudo systemctl restart apache2   # Restart Apache
+```
+
+# Installing Mysql
