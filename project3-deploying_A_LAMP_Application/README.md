@@ -107,7 +107,7 @@ sudo apt upgrade
 ```
 Better still you can run the two at once by using `sudo apt update && sudo apt upgrade -y`. The why stands for yes and just means you want to go ahead with the upgrade
 
-![Alt text](upgrade-package) 
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/upgrade-package.png) 
 
 **2. Install Apache**
 - Install the Apache package using `apt`
@@ -116,7 +116,7 @@ Better still you can run the two at once by using `sudo apt update && sudo apt u
 sudo apt install apache2
 ```
 
-![Alt text](install-apache) 
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/install-apache.png) 
 
 **3. Check Apache Service Status**
 - To confirm that Apache is running as a service
@@ -126,7 +126,7 @@ sudo systemctl status apache2
 ```
 Once you see green and active, you are good to go. 
 
-![Alt text](apache-service) 
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/apache-service.png) 
 
 **4. Open TCP port 80**
 
@@ -134,11 +134,11 @@ Port 80 is the default port web browsers use to access web pages.
    * Go back to "instances" on your AWS console.
    * Click on security and then "security group". Please make sure you select the right instance
      
-![Alt text](security-group) 
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/security-group.png) 
 
    * In the "Security" page click on "Edit in0bound rules"
      
-![Alt text](inbound-rules)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/inbound-rules.png)
 
    * click on **"Add rule"** set up the following:
 
@@ -152,7 +152,7 @@ Port 80 is the default port web browsers use to access web pages.
 
       e. save rules
      
-![Alt text](set-up-inbound-rules)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/set-inbound-rules.png)
 
 **5. Check Port In Local Machine**
 - To ensure you have access to the port, run the following command
@@ -165,7 +165,7 @@ $ curl http://127.0.0.1:80
 ```
 The two commands will give the same output which is the raw HTML code of the website. THe first command uses the `DNS name`. The second comand uses the `IP Address`
 
-![Alt text](port-80)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/port-80.png)
 
 **6. Access Apache Server On Browser**
 
@@ -179,15 +179,15 @@ or run
 curl ifconfig.me
 ```
 
-![Alt text](address)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/address.png)
 
 - Or you can just go to your AWS console and scroll to the right and find your public IP address
 
-![Alt text](address2)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/address2.png)
 
 - Once you have your IP you can just copy it into the browser or use `http://<Public-IP-Address>:80` and you should be able to access the site. 
 
-![Alt text](apache-page)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/apache-page.png)
 
 **7. Managing Apache**
 - To start, stop, or restart Apache, use these commands:
