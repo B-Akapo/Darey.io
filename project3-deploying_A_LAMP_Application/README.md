@@ -292,6 +292,15 @@ php --version
 ```
 ![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/version.png)
 
+# Create A Virtual Host
+In the context of Apache web server, a virtual host refers to the method of hosting multiple websites or web applications on a single server. Each virtual host has its own separate configuration, allowing distinct domain names or IP addresses to be associated with specific directories or settings on the server.
+
+**1. Create Directory for Your Website**
+- Create a directory to hold your website's files. For this project, I will be using `myprofile`. Note if you have an existing domain name you can use it for example myprofile.com
+```
+sudo mkdir /var/www/myprofile
+```
+
 
 
 
