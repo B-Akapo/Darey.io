@@ -271,7 +271,26 @@ sudo mysql -u root -p
 
 You should be able to access the shell now. No one can access your database without your password. 
 
+# Installing PHP
+PHP (Hypertext Preprocessor) is a widely used open-source scripting language specifically designed for web development. Initially created by Rasmus Lerdorf in 1994, PHP has evolved into a versatile language powering numerous websites and web applications. PHP is commonly used for tasks like processing form data, interacting with databases, generating dynamic page content, and creating web-based applications.
 
+**1. Install PHP and Related Packages**
+- Install PHP and necessary extensions for common web development
+```
+sudo apt install php libapache2-mod-php php-mysql
+```
+![Alt text](install-php)
+
+**2. Verify PHP Installation**
+- Check the installed PHP version
+```
+php -v
+```
+or
+```
+php --version
+```
+![Alt text](version)
 
 
 
