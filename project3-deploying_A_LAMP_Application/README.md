@@ -197,4 +197,82 @@ sudo systemctl stop apache2      # Stop Apache
 sudo systemctl restart apache2   # Restart Apache
 ```
 
-# Installing Mysql
+# Installing MySQL
+Now that we have our sever running, the next step is to install a database management system. This allows you to store and manage data for your site. In the LAMP stack, the database management system used is MySQL. MySQL is a popular open-source relational database management system (RDBMS) renowned for its reliability, ease of use, and scalability. Developed by Oracle Corporation, MySQL is widely utilized for managing and organizing structured data.
+
+**1. Install MySQL Server Package**
+- To install the package use the command
+```
+# Install MySQL Server Package
+sudo apt install mysql-server
+```
+
+![Alt text](install-package)
+
+**2. Check Server Status**
+- Now that it is installed, you can check the status to ensure it is running.
+```
+sudo systemctl status mysql
+```
+
+![Alt text](package-status)
+
+Ideally, you package should be active and running. If it isn't, run the command
+```
+sudo systemctl start mysql
+```
+
+**3. Accessing MySQL**
+- To access MySQL in the terminal, run the command
+```
+sudo mysql
+```
+
+![Alt text](access-mysql)
+
+This command allows you to connect to MySQL shell as the administrative database root user.
+
+**4. MySQL Security Configuration (Optional but Recommended)**
+
+It is adviced that you run a pre-installed security script that comes with MySQL. This will help remove and insecure default setting and restrict access to your database
+- Within the MySQL shell run the command
+```
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY <'add your password here'>;
+```
+- exit the shell by typing `exit`
+
+![Alt text](sql-shell)
+
+- Run the secure pre-installed script
+```
+sudo mysql_secure_installation
+```
+- You will be asked to validate password. Enter `y`
+
+![Alt text](password-validation)
+
+- You now need to set your password, in accordance with the rules. You can choose and level you want `0`, `1`, or `2`. For this project I am going with 2. Note that any level you pick, you password must match.
+
+![Alt text](enter-password)
+
+- From here on for any question you are asked. Simply enter `y`
+
+**5. Test Password**
+- Test if you can access MySQL with your new password. Run the command
+```
+sudo mysql -p
+```
+or 
+```
+sudo mysql -u root -p
+```
+
+![Alt text](test-password)
+
+You should be able to access the shell now. No one can access your database without your password. 
+
+
+
+
+
+
