@@ -207,7 +207,7 @@ Now that we have our sever running, the next step is to install a database manag
 sudo apt install mysql-server
 ```
 
-![Alt text](install-package)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/install-package.png)
 
 **2. Check Server Status**
 - Now that it is installed, you can check the status to ensure it is running.
@@ -215,7 +215,7 @@ sudo apt install mysql-server
 sudo systemctl status mysql
 ```
 
-![Alt text](package-status)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/package-status.png)
 
 Ideally, you package should be active and running. If it isn't, run the command
 ```
@@ -228,7 +228,7 @@ sudo systemctl start mysql
 sudo mysql
 ```
 
-![Alt text](access-mysql)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/access-mysql.png)
 
 This command allows you to connect to MySQL shell as the administrative database root user.
 
@@ -241,7 +241,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY <'add you
 ```
 - exit the shell by typing `exit`
 
-![Alt text](sql-shell)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/sql-shell.png)
 
 - Run the secure pre-installed script
 ```
@@ -249,11 +249,11 @@ sudo mysql_secure_installation
 ```
 - You will be asked to validate password. Enter `y`
 
-![Alt text](password-validation)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/password-validation.png)
 
 - You now need to set your password, in accordance with the rules. You can choose and level you want `0`, `1`, or `2`. For this project I am going with 2. Note that any level you pick, you password must match.
 
-![Alt text](enter-password)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/enter-password.png)
 
 - From here on for any question you are asked. Simply enter `y`
 
@@ -267,7 +267,7 @@ or
 sudo mysql -u root -p
 ```
 
-![Alt text](test-password)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/test-password.png)
 
 You should be able to access the shell now. No one can access your database without your password. 
 
