@@ -279,7 +279,7 @@ PHP (Hypertext Preprocessor) is a widely used open-source scripting language spe
 ```
 sudo apt install php libapache2-mod-php php-mysql
 ```
-![Alt text](install-php)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/install-php.png)
 
 **2. Verify PHP Installation**
 - Check the installed PHP version
@@ -290,7 +290,7 @@ or
 ```
 php --version
 ```
-![Alt text](version)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/version.png)
 
 
 
