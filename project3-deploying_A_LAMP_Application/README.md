@@ -300,9 +300,8 @@ In the context of Apache web server, a virtual host refers to the method of host
 ```
 sudo mkdir /var/www/myprofile
 ```
-![Alt text](create-driectory)
 
-**2. Create Directory for Your Website**
+**2. Assign Ownership**
 - Assign ownership of the directory by using `$USER`
 ```
 sudo chown -R $USER:$USER /var/www/myprofile
@@ -312,7 +311,7 @@ sudo chown -R $USER:$USER /var/www/myprofile
 sudo chmod -R 755 /var/www
 ```
 
-![Alt text](owner)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/owner.png)
 
 
 **3. Create a Virtual Host Configuration File**
@@ -336,7 +335,7 @@ sudo vi /etc/apache2/sites-available/myprofile.conf
 * Type `:` before typyin `wq` and hitting `ENTER`
 * Not sure how exit `vi` watch this [video](https://www.youtube.com/watch?v=KwCvEVblJl8) 
  
-![Alt text](configuration)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/configuration.png)
 
 - To see the `sites available directory` runn the following command
 ```
@@ -344,7 +343,7 @@ sudo ls /etc/apache2/sites-available
 ```
 You will see something like this `000-default.conf  default-ssl.conf  myprofile.conf`
 
-![Alt text](sites-available)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/sites-available.png)
 
 **4. Enable the Virtual Host**
 - Th enable virtual host run the command:
@@ -352,7 +351,7 @@ You will see something like this `000-default.conf  default-ssl.conf  myprofile.
 sudo a2ensite myprofile
 ```
 
-![Alt text](enable)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/enable.png)
 
 **5. Disable Apaches Default Website**
 - If you are not using s custom domain, it is adviseable to diable Apache's default website so that Apache's default configuration doesn't overwrite your website.
@@ -360,7 +359,7 @@ sudo a2ensite myprofile
 sudo a2dissite 000-default
 ```
 
-![Alt text](disable)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/disable.png)
 
 **6. Test Configuration**
 - To ensure your configuration doesnt have sytax error, run:
@@ -368,7 +367,7 @@ sudo a2dissite 000-default
 sudo apache2ctl configtest
 ```
 
-![Alt text](config-test)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/config-test.png)
 
 **6. Reload Apache**
 - To see your changes. reload Apache
@@ -392,7 +391,7 @@ Just remeber to change the IP to yours.
 `http://16.16.213.30/:80`
 ```
 
-![Alt text](index)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/index.png)
 
 
 
