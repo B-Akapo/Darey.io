@@ -381,14 +381,18 @@ sudo systemctl reload apache2
 ```
 echo "Hello World" > /var/www/myprofile//index.html
 ```
+- However if you want a more informative message that let's your visitors know when your site is down, use:
+```
+sudo echo 'Hello LAMP from hostname' $(curl -s http://16.16.213.30/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://16.16.213.30/latest/meta-data/public-ipv4) > /var/www/myprofile/index.html
+```
+Just remeber to change the IP to yours. 
+
 - To see you your `index.html` you use the syntaxt `http://<Public-IP-Address>:80`. If you dont know you IP run the command `curl ifconfig.me`. Oncce you get you public IP copy it and paste in your browser
 ```
 `http://16.16.213.30/:80`
 ```
 
 ![Alt text](index)
-
-Remeber when we created your file we typed in "Hello World" and that is what you should see on the screen right now. 
 
 
 
