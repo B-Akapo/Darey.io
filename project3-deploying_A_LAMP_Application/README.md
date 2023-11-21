@@ -300,6 +300,112 @@ In the context of Apache web server, a virtual host refers to the method of host
 ```
 sudo mkdir /var/www/myprofile
 ```
+![Alt text](create-driectory)
+
+**2. Create Directory for Your Website**
+- Assign ownership of the directory by using `$USER`
+```
+sudo chown -R $USER:$USER /var/www/myprofile
+```
+- Set permissions using the `chmod` command
+```
+sudo chmod -R 755 /var/www
+```
+
+![Alt text](owner)
+
+
+**3. Create a Virtual Host Configuration File**
+- Create a blank configuration file using `vi`. Note you can use other editors like `nano` or `vs code`
+```
+sudo vi /etc/apache2/sites-available/myprofile.conf
+```
+- while in `vi` take the following steps
+* Hit `esc` key and the type `i`. This will take you to the insert mode.
+* Copy the code below and paste in your editior
+```
+<VirtualHost *:80>
+   ServerName myprofile
+   ServerAlias www.myprofile
+   ServerAdmin webmaster@localhost
+   DocumentRoot /var/www/myprofile
+   ErrorLog ${APACHE_LOG_DIR}/error.log
+   CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+* Type `:` before typyin `wq` and hitting `ENTER`
+* Not sure how exit `vi` watch this [video](https://www.youtube.com/watch?v=KwCvEVblJl8) 
+ 
+![Alt text](configuration)
+
+- To see the `sites available directory` runn the following command
+```
+sudo ls /etc/apache2/sites-available
+```
+You will see something like this `000-default.conf  default-ssl.conf  myprofile.conf`
+
+![Alt text](sites-available)
+
+**4. Enable the Virtual Host**
+- Th enable virtual host run the command:
+```
+sudo a2ensite myprofile
+```
+
+![Alt text](enable)
+
+**5. Disable Apaches Default Website**
+- If you are not using s custom domain, it is adviseable to diable Apache's default website so that Apache's default configuration doesn't overwrite your website.
+```
+sudo a2dissite 000-default
+```
+
+![Alt text](disable)
+
+**6. Test Configuration**
+- To ensure your configuration doesnt have sytax error, run:
+```
+sudo apache2ctl configtest
+```
+
+![Alt text](config-test)
+
+**6. Reload Apache**
+- To see your changes. reload Apache
+```
+sudo systemctl reload apache2
+```
+
+**7. Create an HTML File**
+- Your website is active but you dont have an `index.html` file to test if the virtual host works. Let's create a none empty file
+```
+echo "Hello World" > /var/www/myprofile//index.html
+```
+- To see you your `index.html` you use the syntaxt `http://<Public-IP-Address>:80`. If you dont know you IP run the command `curl ifconfig.me`. Oncce you get you public IP copy it and paste in your browser
+```
+`http://16.16.213.30/:80`
+```
+
+![Alt text](index)
+
+Remeber when we created your file we typed in "Hello World" and that is what you should see on the screen right now. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
 
 
 
