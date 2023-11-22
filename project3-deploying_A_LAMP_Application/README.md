@@ -388,13 +388,12 @@ Just remeber to change the IP to yours.
 
 - To see you your `index.html` you use the syntaxt `http://<Public-IP-Address>:80`. If you dont know you IP run the command `curl ifconfig.me`. Oncce you get you public IP copy it and paste in your browser
 ```
-`http://16.16.213.30/:80`
+http://16.16.213.30/:80
 ```
 
 ![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/index.png)
 
-
-
+# Enable PHP On The Website
 
 
 
