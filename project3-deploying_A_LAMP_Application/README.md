@@ -11,7 +11,7 @@
 8. [Enable PHP On The Website](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/README.md#enable-php-on-the-website)
    - [Why HTML Files Take Precedence](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/README.md#why-indexhtml-takes-precedence)
    - [Benefits Of Having A HTML File](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/README.md#benefits-of-having-indexhtml)
-9. [Conclusion]()
+9. [Conclusion](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/README.md#conclusion)
 
 # Introduction to LAMP Stack
 
