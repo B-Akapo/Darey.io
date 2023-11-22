@@ -1,3 +1,18 @@
+# Table Of Content
+1. [Introduction to LAMP Stack](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/README.md#introduction-to-lamp-stack)
+2. [Getting Started with AWS](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/README.md#getting-started-with-aws)
+   - [Signing Up for AWS](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/README.md#signing-up-for-aws)
+   - [Setting Up an EC2 Instance](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/README.md#setting-up-an-ec2-instance)
+3. [Connecting To Your EC2 Instance From Your Local Machine](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/README.md#connecting-to-your-ec2-instance-from-your-local-machine)
+4. [Installing Apache](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/README.md#installing-apache)
+5. [Installing MySQL](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/README.md#installing-mysql)
+6. [Installing PHP](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/README.md#installing-php)
+7. [Create A Virtual Host](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/README.md#create-a-virtual-host)
+8. [Enable PHP On The Website](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/README.md#enable-php-on-the-website)
+   - [Why HTML Files Take Precedence](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/README.md#why-indexhtml-takes-precedence)
+   - [Benefits Of Having A HTML File](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/README.md#benefits-of-having-indexhtml)
+9. [Conclusion]()
+
 # Introduction to LAMP Stack
 
 The LAMP stack, an acronym for Linux, Apache, MySQL, and PHP/Perl/Python, represents a foundational setup widely utilized for web development and hosting dynamic web applications. Each component plays a crucial role:
@@ -313,7 +328,6 @@ sudo chmod -R 755 /var/www
 
 ![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/owner.png)
 
-
 **3. Create a Virtual Host Configuration File**
 - Create a blank configuration file using `vi`. Note you can use other editors like `nano` or `vs code`
 ```
@@ -428,7 +442,7 @@ TO THIS
 ```
 To save and exit `vi` watch this [video](https://www.youtube.com/watch?v=KwCvEVblJl8)
 
-![Alt text](change-default)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/change-default.png)
 
 **2. Reload Apache:**
 - To effect the changes you will need to reload Apache
@@ -446,7 +460,7 @@ vi /var/www/myprofile/index.php
 <?php
 phpinfo();
 ```
-![Alt text](php-script)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/php-script.png)
 
 - Remember to run `curl ifconfig.me` to get you IP then copy it to your browser. Use this syntax
 ```
@@ -454,7 +468,7 @@ http://<Public-IP-Address>:80
 ```
 For example `http://51.20.123.107:80`. You should see a page similar to the one below
 
-![Alt text](php-page)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project3-deploying_A_LAMP_Application/images/php-page.png)
 
 **4. Test Delete PHP File**
 - Because of the sensitive nature of the information on the index.php file it is always better to delete the file once you are done with maintenance. You can always recreate it again. if you need it.
@@ -464,6 +478,7 @@ sudo rm /var/www/myprofile/index.php
 You should now see the **404 Page** again
 
 # Conclusion
+Deploying a LAMP stack application on AWS involves configuring various components like Linux, Apache, MySQL, and PHP. This setup lays the foundation for hosting dynamic web applications. From setting up an EC2 instance to installing and configuring each stack component, this guide provides step-by-step instructions to navigate through the process seamlessly. Embracing the synergy between these elements allows for robust web hosting, database management, and dynamic content creation. Mastering the LAMP stack empowers you to develop, deploy, and manage web applications efficiently, leveraging the power of AWS cloud infrastructure and open-source technologies.
 
 
 
