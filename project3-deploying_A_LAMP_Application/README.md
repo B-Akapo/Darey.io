@@ -395,6 +395,76 @@ http://16.16.213.30/:80
 
 # Enable PHP On The Website
 
+The precedence of `index.html` over `index.php` is often due to the default directory index settings in web servers like Apache. When a web server receives a request for a directory (e.g., http://example.com/), it looks for a default file to serve. Common default filenames include `index.html, index.php, etc., specified in the server configuration.
+
+## Why index.html Takes Precedence
+
+- **Default Configuration:** By default, web servers are configured to serve index.html as the default directory index file. If both index.html and index.php exist in the same directory, the server prioritizes index.html unless configured otherwise.
+- **Static Content Preference:** index.html typically contains static content like text, images, or basic HTML structure. It's lightweight and serves as an entry point for web pages.
+
+## Benefits of Having index.html
+- **Lightweight Landing Page:** index.html serves as a simple, lightweight landing page that loads quickly. It's beneficial for visitors arriving at the root of a website as it provides a starting point for navigation.
+- **Fallback for PHP Errors:** In scenarios where PHP encounters errors or misconfigurations, having a functional index.html can prevent the server from displaying PHP errors to users, maintaining a better user experience.
+- **SEO Considerations:** Search engines might prefer index.html as the default landing page due to its static nature, potentially positively impacting search engine optimization.
+
+Now that we know the difference, let us go on to enabling `index.php`
+
+**1. Change Default Setting:**
+- First we change the order of precedence
+```
+sudo vi /etc/apache2/mods-enabled/dir.conf
+```
+- Change the following code
+```
+<IfModule mod_dir.c>
+        #DirectoryIndex index.html index.cgi index.pl index.php index.xhtml index.htm
+</IfModule>
+```
+TO THIS
+```
+<IfModule mod_dir.c>
+        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+</IfModule>
+```
+To save and exit `vi` watch this [video](https://www.youtube.com/watch?v=KwCvEVblJl8)
+
+![Alt text](change-default)
+
+**2. Reload Apache:**
+- To effect the changes you will need to reload Apache
+```
+sudo systemctl reload apache2
+```
+
+**3. Test PHP Configuration**
+- First you create an `index.php` file
+```
+vi /var/www/myprofile/index.php
+```
+- in `index.php` copy the following script, paste and save.
+```
+<?php
+phpinfo();
+```
+![Alt text](php-script)
+
+- Remember to run `curl ifconfig.me` to get you IP then copy it to your browser. Use this syntax
+```
+http://<Public-IP-Address>:80
+```
+For example `http://51.20.123.107:80`. You should see a page similar to the one below
+
+![Alt text](php-page)
+
+**4. Test Delete PHP File**
+- Because of the sensitive nature of the information on the index.php file it is always better to delete the file once you are done with maintenance. You can always recreate it again. if you need it.
+```
+sudo rm /var/www/myprofile/index.php
+```
+You should now see the **404 Page** again
+
+# Conclusion
+
 
 
 
