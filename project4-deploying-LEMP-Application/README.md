@@ -28,14 +28,14 @@ sudo apt update; sudo apt upgrade
 ```
 Remember to type `Y` when asked. 
 
-![Alt text](package-update)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/package-update.png)
 
 **2. Install Nginx:**
 - Use apt to install the Nginx package.
 ```
 sudo apt install nginx
 ```
-![Alt text](install-nginx)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/install-nginx.png)
 
 **3. Check Nginx Service Status**
 - To confirm that Nginx is running as a service
@@ -44,7 +44,7 @@ sudo systemctl status nginx
 ```
 Once you see green and active, you are good to go.
 
-![Alt text](check-status)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/check-status.png)
 
 **4. Open TCP Port**
 
@@ -98,7 +98,7 @@ curl ifconfig.me
 
 - Once you have your IP you can just copy it into the browser or use `http://<Public-IP-Address>:80` and you should be able to access the site. 
 
-![Alt text](nginx-page)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/nginx-page.png)
 
 # Installing MySQL
 Now that we have our sever running, the next step is to install a database management system. This allows you to store and manage data for your site. In the LAMP stack, the database management system used is MySQL. MySQL is a popular open-source relational database management system (RDBMS) renowned for its reliability, ease of use, and scalability. Developed by Oracle Corporation, MySQL is widely utilized for managing and organizing structured data.
