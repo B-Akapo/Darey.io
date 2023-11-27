@@ -418,13 +418,13 @@ try {
 
 ```
 
-![Alt text](php-script)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/php-script.png)
 
 - Lets access our todo list the browser using the public IP.
 ```
 http://13.51.170.238/todo_list.php
 ```
-![Alt text](todo)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/todo.png)
 
 Viola and you are done
 
