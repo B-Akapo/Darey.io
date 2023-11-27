@@ -346,7 +346,7 @@ mysql> GRANT ALL ON example_database.* TO 'example_user'@'%';
 ```
 This will allow user to have access to a particular database but cannot create or modify access to other databases
 
-![Alt text](grant-access)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/grant-access.png)
 
 - exit MySql
 ```
