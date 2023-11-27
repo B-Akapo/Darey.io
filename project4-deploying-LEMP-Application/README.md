@@ -174,6 +174,148 @@ sudo mysql -u root -p
 
 You should be able to access the shell now. No one can access your database without your password. 
 
+# Installing PHP
+As a web server, Apache incorporates a PHP interpreter directly into its architecture. This tight integration means that when Apache encounters a PHP file, it interprets and processes it internally, handling the server-side scripting without requiring an external helper. Contrastingly, Nginx treats PHP processing as an external task. It leverages an external program like PHP-FPM (PHP FastCGI Process Manager) to handle PHP script execution. This separation enables Nginx to focus on its core competency of efficiently serving static content while delegating the dynamic PHP execution to an external service, enhancing its scalability and performance.
+```
+sudo apt install php-fpm php-mysql
+```
+![Alt text](install-php)
+
+# Configure Nginx to Process PHP
+Server blocks in Nginx serve a role akin to Apache's virtual hosts. They enable the configuration of multiple websites or applications on a single Nginx instance, allowing distinct sites to coexist and function independently. Let's begin.
+
+**1: Create A Directory**
+- To do this I will be naming my directory `myprofile`. You can name it what ever you want
+```
+sudo mkdir /var/www/myprofile
+```
+**2: Assign Ownership**
+- Next thing we need to do is to assing ownership
+```
+sudo chown -R $USER:$USER /var/www/myprofile
+```
+- Set permissions using the `chmod` command
+```
+sudo chmod -R 755 /var/www
+```
+
+![Alt text](directory)
+
+**3: Create A Server Block Configuration File**
+- Create a blank configuration file using `vi`. Note you can use other editors like `nano` or `vs code`
+```
+sudo vi /etc/nginx/sites-available/myprofile
+```
+- while in `vi` take the following steps
+* Hit `esc` key and the type `i`. This will take you to
+* Copy the code below and paste in your editior
+```
+#/etc/nginx/sites-available/myprofile
+
+server {
+    listen 80;
+    server_name myprofile www.myprofile;
+    root /var/www/myprofile;
+
+    index index.html index.htm index.php;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
+     }
+
+    location ~ /\.ht {
+        deny all;
+    }
+
+}
+```
+* Type `:` before typyin `wq` and hitting `ENTER`
+* Not sure how exit `vi` watch this [video](https://www.youtube.com/watch?v=KwCvEVblJl8)
+
+![Alt text](configure)
+
+**4: Activate Configuration**
+- You activate configuration by linking Nginx `sites-enabled` directory to the config file
+```
+sudo ln -s /etc/nginx/sites-available/myprofile /etc/nginx/sites-enabled/
+```
+
+**5: Test For Syntax Errors**
+- To be sure your configuration file is error free, test for syntax errors using
+```
+sudo nginx -t
+```
+The out put you should see is 
+`nginx: the configuration file /etc/nginx/nginx.conf syntax is ok`
+`nginx: configuration file /etc/nginx/nginx.conf test is successful`
+
+If there are any errors, simply go to your configuration file and edit. 
+
+![Alt text](test)
+
+**6: Disable Default Nginx Host**
+```
+sudo unlink /etc/nginx/sites-enabled/default
+```
+**7: Reload Nginx**
+```
+sudo systemctl reload nginx
+```
+YAYYY Your website is now active
+
+**8: Create HTML File**
+- To test your new server is working properly, create an `index.html` file
+```
+sudo echo 'Hello LEMP from hostname' $(curl -s http://51.20.74.243/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://51.20.74.243/latest/meta-data/public-ipv4) > /var/www/myprofile/index.html
+```
+Please remember to change the IP address to yours and also the directory
+
+- Lets see if it works. Copy the following code into your browser
+```
+http://51.20.74.243:80
+```
+Remember to user your IP address
+
+![Alt text](nginx)
+
+You should see a similar page to the one above.
+
+# Testing PHP With Nginx
+Your LEMP Stack is fully set up and functional but you can test this to be sure
+
+**1: Create a PHP File**
+- use your choosen editor to create and `index.php` file . Will be use `vi`
+```
+vi /var/www/myprofile/info.php
+```
+- Copy the following code and paste in your editor
+```
+<?php
+phpinfo();
+```
+![Alt text](php-file)
+- save and exit
+- Now if you enter you IP address and add your PHP file in your browser, you should see your PHP file
+```
+http://51.20.74.243/info.php
+```
+![Alt text](php-page)
+
+- for saftey always delete your php file when you arent using it for maintenance as it containce delicate information. Doing this will revert to the original `index.html`
+```
+sudo rm /var/www/myprofile/info.php
+```
+
+
+
+
+  
+
 
 
 
