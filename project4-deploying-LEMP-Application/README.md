@@ -199,7 +199,7 @@ sudo chown -R $USER:$USER /var/www/myprofile
 sudo chmod -R 755 /var/www
 ```
 
-![Alt text]([directory](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/directory.png))
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/directory.png)
 
 **3: Create A Server Block Configuration File**
 - Create a blank configuration file using `vi`. Note you can use other editors like `nano` or `vs code`
@@ -298,13 +298,13 @@ vi /var/www/myprofile/info.php
 <?php
 phpinfo();
 ```
-![Alt text]([php-file](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/php-file.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/php-file.png)
 - save and exit
 - Now if you enter you IP address and add your PHP file in your browser, you should see your PHP file
 ```
 http://51.20.74.243/info.php
 ```
-![Alt text]([php-page](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/php-page.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/php-page.png)
 
 - for saftey always delete your php file when you arent using it for maintenance as it containce delicate information. Doing this will revert to the original `index.html`
 ```
