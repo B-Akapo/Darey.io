@@ -329,7 +329,7 @@ mysql> CREATE DATABASE `example_database`;
 ```
 The name of our database is `example_database`
 
-![Alt text](create-database)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/create-database.png)
 
 **2: CReate New User**
 - Now that you have the new database, create a new user
@@ -338,7 +338,7 @@ mysql>  CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 
 ```
 Remember to add your own secure password.
 
-![Alt text](create-user)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/create-user.png)
 
 - Give new user permission over the new database
 ```
@@ -359,7 +359,7 @@ mysql> exit
 mysql -u example_user -p
 ```
 When prompted, enter the password you created
-![Alt text](test-access)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/grant-access.png)
 
 - check to ensure that `example_user` has access to datatbase
 ```
@@ -371,20 +371,20 @@ mysql> SHOW DATABASES;
 ```
 CREATE TABLE example_database.todo_list (item_id INT AUTO_INCREMENT,content VARCHAR(255),PRIMARY KEY(item_id));
 ```
-![Alt text](create-table)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/create-table.png)
 
 **4: Insert Values Into Table**
 - Let's add some content into the table. You can do this as many times as you want to update new values to your table.
 ```
 mysql> INSERT INTO example_database.todo_list (content) VALUES ("My first important item");
 ```
-![Alt text](create-list)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/create-list.png)
 
 - Confirm that the data was successfully saved to your table
 ```
 mysql>  SELECT * FROM example_database.todo_list;
 ```
-![Alt text](showtable)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/show-table.png)
 
 - exit MySql console
 ```
