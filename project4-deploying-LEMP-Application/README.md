@@ -394,9 +394,39 @@ mysql> exit
 **5: PHP Script To Connect TO MySQL**
 - Create a new PHP file using your favourite text editor. I will be using `vi`
 ```
-vi /var/www/projectLEMP/todo_list.php
+vi /var/www/myprofile/todo_list.php
+```
+- The script below connects to you MySQL database and queries for the content of the `todo_list` table. Copy the code into your editor, save and exit
+```
+<?php
+$user = "example_user";
+$password = "PassWord.1";
+$database = "example_database";
+$table = "todo_list";
+
+try {
+  $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+  echo "<h2>TODO</h2><ol>";
+  foreach($db->query("SELECT content FROM $table") as $row) {
+    echo "<li>" . $row['content'] . "</li>";
+  }
+  echo "</ol>";
+} catch (PDOException $e) {
+    print "Error!: " . $e->getMessage() . "<br/>";
+    die();
+}
+
 ```
 
+![Alt text](php-script)
+
+- Lets access our todo list the browser using the public IP.
+```
+http://13.51.170.238/todo_list.php
+```
+![Alt text](todo)
+
+Viola and you are done
 
 
 
