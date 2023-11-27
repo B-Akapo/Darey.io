@@ -179,7 +179,7 @@ As a web server, Apache incorporates a PHP interpreter directly into its archite
 ```
 sudo apt install php-fpm php-mysql
 ```
-![Alt text](install-php)
+![Alt text]([install-php](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/install-php.png))
 
 # Configure Nginx to Process PHP
 Server blocks in Nginx serve a role akin to Apache's virtual hosts. They enable the configuration of multiple websites or applications on a single Nginx instance, allowing distinct sites to coexist and function independently. Let's begin.
@@ -199,7 +199,7 @@ sudo chown -R $USER:$USER /var/www/myprofile
 sudo chmod -R 755 /var/www
 ```
 
-![Alt text](directory)
+![Alt text]([directory](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/directory.png))
 
 **3: Create A Server Block Configuration File**
 - Create a blank configuration file using `vi`. Note you can use other editors like `nano` or `vs code`
@@ -237,7 +237,7 @@ server {
 * Type `:` before typyin `wq` and hitting `ENTER`
 * Not sure how exit `vi` watch this [video](https://www.youtube.com/watch?v=KwCvEVblJl8)
 
-![Alt text](configure)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/configure.png)
 
 **4: Activate Configuration**
 - You activate configuration by linking Nginx `sites-enabled` directory to the config file
@@ -256,7 +256,7 @@ The out put you should see is
 
 If there are any errors, simply go to your configuration file and edit. 
 
-![Alt text](test)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/test.png)
 
 **6: Disable Default Nginx Host**
 ```
@@ -281,7 +281,7 @@ http://51.20.74.243:80
 ```
 Remember to user your IP address
 
-![Alt text](nginx)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/nginx.png)
 
 You should see a similar page to the one above.
 
@@ -298,18 +298,109 @@ vi /var/www/myprofile/info.php
 <?php
 phpinfo();
 ```
-![Alt text](php-file)
+![Alt text]([php-file](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/php-file.png)
 - save and exit
 - Now if you enter you IP address and add your PHP file in your browser, you should see your PHP file
 ```
 http://51.20.74.243/info.php
 ```
-![Alt text](php-page)
+![Alt text]([php-page](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/php-page.png)
 
 - for saftey always delete your php file when you arent using it for maintenance as it containce delicate information. Doing this will revert to the original `index.html`
 ```
 sudo rm /var/www/myprofile/info.php
 ```
+
+# Retrieving Data From MySQL Database Using PHP
+Now that our LEMP Stack is set up, let's dive in. We'll create a test database in MySQL, configure access, and execute queries to fetch and dynamically display data using PHP. This process highlights the seamless integration of Nginx, MySQL, and PHP within our LEMP environment, showcasing their collaborative strength in creating dynamic web experiences.
+
+**1: Connect to MySQL**
+- You connect to MySQL as a root user
+```
+sudo mysql -p
+```
+We are using `-p` here because we set the password earlier. 
+
+
+**1: Create New Database**
+- Within the SQL console, create a new database using the following command
+```
+mysql> CREATE DATABASE `example_database`;
+```
+The name of our database is `example_database`
+
+![Alt text](create-database)
+
+**2: CReate New User**
+- Now that you have the new database, create a new user
+```
+mysql>  CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'your-choosen-password';
+```
+Remember to add your own secure password.
+
+![Alt text](create-user)
+
+- Give new user permission over the new database
+```
+mysql> GRANT ALL ON example_database.* TO 'example_user'@'%';
+```
+This will allow user to have access to a particular database but cannot create or modify access to other databases
+
+![Alt text](grant-access)
+
+- exit MySql
+```
+mysql> exit
+```
+
+**3: Test User Access**
+- Now test to see if user does have access using customised user credentials
+```
+mysql -u example_user -p
+```
+When prompted, enter the password you created
+![Alt text](test-access)
+
+- check to ensure that `example_user` has access to datatbase
+```
+mysql> SHOW DATABASES;
+```
+
+**4: Create Test Table**
+- We will create a test table named `todo_list` in MySQL console
+```
+CREATE TABLE example_database.todo_list (item_id INT AUTO_INCREMENT,content VARCHAR(255),PRIMARY KEY(item_id));
+```
+![Alt text](create-table)
+
+**4: Insert Values Into Table**
+- Let's add some content into the table. You can do this as many times as you want to update new values to your table.
+```
+mysql> INSERT INTO example_database.todo_list (content) VALUES ("My first important item");
+```
+![Alt text](create-list)
+
+- Confirm that the data was successfully saved to your table
+```
+mysql>  SELECT * FROM example_database.todo_list;
+```
+![Alt text](showtable)
+
+- exit MySql console
+```
+mysql> exit
+```
+
+**5: PHP Script To Connect TO MySQL**
+- Create a new PHP file using your favourite text editor. I will be using `vi`
+```
+vi /var/www/projectLEMP/todo_list.php
+```
+
+
+
+
+
 
 
 
