@@ -623,12 +623,106 @@ echo "Square root of number 2: $square_root"
 ./calculations.sh
 ```
 
-![Alt text](calculations.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project5-shell-scripting/images/calculations.png)
 
+# File Backup And Time Stamping
+As a DevOps engineer, regular file and database backups are a routine and crucial responsibilityHaving a script that does that for you will make life a whole lot easier. Let us take a look at how to do it
 
+**Step 1: Create a new file**
+- In the same directory create a new file
+```
+touch backup.sh
+```
+Remember, you can name your file whatever you want. Run `ls` command to see if your file has been created
 
+**Step 2: Give the file Permission**
+- To make your file executable you need to give it the right permission
+```
+chmod +x backup.sh
+```
+**Step 3: Add A Shebang in the file**
+- Open the file with your choosen editor
+```
+vim backup.sh
+```
+- For the system to know to run your file as a program, it must have a `shebang`.
+```
+#! /usr/bin/bash
+```
+**Step 4: Define the source directory**
+```
+#!/bin/bash
 
+# Define the source directory and backup directory
+source_dir="/home/bunmi/study/shell-scripting"
+backup_dir="/home/bunmi/study/shell-scripting/backup_dir"
+```
+**Step 5: Create a timestamp**
+```
+#!/bin/bash
 
+# Define the source directory and backup directory
+source_dir="/home/bunmi/study/shell-scripting"
+backup_dir="/home/bunmi/study/shell-scripting_backup"
+
+# Create a timestamp with the current date and time
+timestamp=$(date +"%Y%m%d%H%M%S")
+```
+**Step 6: Create a backup directory**
+```
+#!/bin/bash
+
+# Define the source directory and backup directory
+source_dir="/home/bunmi/study/shell-scripting"
+backup_dir="/home/bunmi/study/shell-scripting_backup"
+
+# Create a timestamp with the current date and time
+timestamp=$(date +"%Y%m%d%H%M%S")
+
+# Create a backup directory with the timestamp
+backup_dir_with_timestamp="$backup_dir/backup_$timestamp"
+
+# Create the backup directory
+mkdir -p "$backup_dir_with_timestamp"
+```
+**Step 7: Copy Files**
+```
+#!/bin/bash
+
+# Define the source directory and backup directory
+source_dir="/home/bunmi/study/shell-scripting"
+backup_dir="/home/bunmi/study/shell-scripting_backup"
+
+# Create a timestamp with the current date and time
+timestamp=$(date +"%Y%m%d%H%M%S")
+
+# Create a backup directory with the timestamp
+backup_dir_with_timestamp="$backup_dir/backup_$timestamp"
+
+# Create the backup directory
+mkdir -p "$backup_dir_with_timestamp"
+
+# Copy all files from the source directory to the backup directory
+cp -r "$source_dir"/* "$backup_dir_with_timestamp"
+
+# Display a message indicating the backup process is complete
+echo "Backup completed. Files copied to: $backup_dir_with_timestamp"
+```
+**Step 8: Run your file**
+```
+./backup.sh
+```
+Your file should now be backed up 
+
+![Al text](backup.png)
+
+Let's quickly check. Run `ls` in your source directory and see the list of your file. 
+
+![Alt text](source.png)
+
+Now `cd` to you source directory and run `ls` to see the exact files. 
+
+![Alt text](copy.png)
 
 
 
