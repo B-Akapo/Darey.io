@@ -512,7 +512,7 @@ cat files_sorted_alphabetically.txt
 ```
 Viola it is done. Well done
 
-![Alt text](sorting.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project5-shell-scripting/images/sorting.png)
 
 
 
