@@ -95,7 +95,7 @@ touch navigating-linux-filesystem.sh
 ```
 Remember, you can name your file whatever you want. Run `ls` command to see if your file has been created
 
-![Alt text](new-file.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project5-shell-scripting/images/new-file.png)
 
 **Step 2: Give the file Permission**
 - To make your file executable you need to give it the right permission
@@ -316,7 +316,208 @@ Your script is done now save your file.  Hit `Esc` and the type `:wq` to save an
 ./navigating-linux-filesystem.sh
 ```
 
-![Alt text](navigate.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project5-shell-scripting/images/navigate.png)
+
+# File Operations And Sorting
+Now lets try writing a script that creates a set of files and the sorts them in a certain order.
+
+**Step 1: Create a new file**
+- In the same directory create a new file
+```
+touch sorting.sh
+```
+Remember, you can name your file whatever you want. Run `ls` command to see if your file has been created
+
+**Step 2: Give the file Permission**
+- To make your file executable you need to give it the right permission
+```
+chmod +x sorting.sh
+```
+**Step 3: Add A Shebang in the file**
+- Open the file with your choosen editor
+```
+vim sorting.sh
+```
+- For the system to know to run your file as a program, it must have a `shebang`.
+```
+#! /usr/bin/bash
+```
+**Step 4: Create your files**
+```
+#! /usr/bin/bash
+
+# Let users know you are creating files
+echo "Creating files..."
+
+# Create 3 files
+echo "This is file3." > file3.txt
+echo "This is file1." > file1.txt
+echo "This is file2." > file2.txt
+
+# Let users know the file has been created. The first echo creates and empty line for aesthetics
+echo " "
+echo "Files created"
+
+# Display the files in their current order
+echo " "
+echo "Files in their current order"
+ls
+```
+**Step 5: Sort Filesk Alphabetically**
+```
+#! /usr/bin/bash
+
+# Let users know you are creating files
+echo "Creating files..."
+
+# Create 3 files
+echo "This is file3." > file3.txt
+echo "This is file1." > file1.txt
+echo "This is file2." > file2.txt
+
+# Let users know the file has been created. The first echo creates and empty line for aesthetics
+echo " "
+echo "Files created"
+
+# Display the files in their current order
+echo " "
+echo "Files in their current order"
+ls
+
+# Let users know you are sorting files
+echo " "
+echo "Now sorting in alphabetical order
+
+# Sort the files into a new file
+ls | sort > sorted_files.txt
+
+# Let users know the files have been sorted
+echo "Files sorted..."
+
+# Display sorted files
+echo " "
+echo "Sorted files: "
+cat sorted_files.txt
+```
+**Step 6: Remove the new files created**
+```
+#! /usr/bin/bash
+
+# Let users know you are creating files
+echo "Creating files..."
+
+# Create 3 files
+echo "This is file3." > file3.txt
+echo "This is file1." > file1.txt
+echo "This is file2." > file2.txt
+
+# Let users know the file has been created. The first echo creates and empty line for aesthetics
+echo " "
+echo "Files created"
+
+# Display the files in their current order
+echo " "
+echo "Files in their current order"
+ls
+
+# Let users know you are sorting files
+echo " "
+echo "Now sorting in alphabetical order
+
+# Sort the files into a new file
+ls | sort > sorted_files.txt
+
+# Let users know the files have been sorted
+echo "Files sorted..."
+
+# Display sorted files
+echo " "
+echo "Sorted files: "
+cat sorted_files.txt
+
+# Let users know you are removing files
+echo " "
+echo "Now removing files"
+
+# Remove files
+rm file1.txt file2.txt file3.txt
+
+# Let users know that the files have been removed
+echo "Files removed..."
+```
+**Step 7: Rename the existing sorted file**
+```
+#! /usr/bin/bash
+
+# Let users know you are creating files
+echo "Creating files..."
+
+# Create 3 files
+echo "This is file3." > file3.txt
+echo "This is file1." > file1.txt
+echo "This is file2." > file2.txt
+
+# Let users know the file has been created. The first echo creates and empty line for aesthetics
+echo " "
+echo "Files created"
+
+# Display the files in their current order
+echo " "
+echo "Files in their current order"
+ls
+
+# Let users know you are sorting files
+echo " "
+echo "Now sorting in alphabetical order
+
+# Sort the files into a new file
+ls | sort > sorted_files.txt
+
+# Let users know the files have been sorted
+echo "Files sorted..."
+
+# Display sorted files
+echo " "
+echo "Sorted files: "
+cat sorted_files.txt
+
+# Let users know you are removing files
+echo " "
+echo "Now removing files"
+
+# Remove files
+rm file1.txt file2.txt file3.txt
+
+# Let users know that the files have been removed
+echo "Files removed..."
+
+# Let users know you are renaming the file
+echo " "
+echo "Renaming files"
+
+# Rename the files
+mv sorted_files.txt files_sorted_alphabetically.txt
+
+#Let users know the file has been renamed
+echo "File renamed"
+
+# Display the sorted file
+echo " "
+echo "Final sorted file"
+cat files_sorted_alphabetically.txt
+```
+**Step 8: Run your file**
+```
+./sorting.sh
+```
+Viola it is done. Well done
+
+![Alt text](sorting.png)
+
+
+
+
+
 
 
 
