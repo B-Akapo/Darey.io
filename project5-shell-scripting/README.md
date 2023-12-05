@@ -714,15 +714,15 @@ echo "Backup completed. Files copied to: $backup_dir_with_timestamp"
 ```
 Your file should now be backed up 
 
-![Al text](backup.png)
+![Al text](https://github.com/B-Akapo/Darey.io/blob/main/project5-shell-scripting/images/backup.png)
 
 Let's quickly check. Run `ls` in your source directory and see the list of your file. 
 
-![Alt text](source.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project5-shell-scripting/images/source.png)
 
 Now `cd` to you source directory and run `ls` to see the exact files. 
 
-![Alt text](copy.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project5-shell-scripting/images/copy.png)
 
 
 
