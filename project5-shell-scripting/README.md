@@ -514,6 +514,122 @@ Viola it is done. Well done
 
 ![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project5-shell-scripting/images/sorting.png)
 
+# Working With Numbers And Calculations
+Scripts can also be used for aritmethics. Let's take a look at it.
+
+**Step 1: Create a new file**
+- In the same directory create a new file
+```
+touch calculations.sh
+```
+Remember, you can name your file whatever you want. Run `ls` command to see if your file has been created
+
+**Step 2: Give the file Permission**
+- To make your file executable you need to give it the right permission
+```
+chmod +x calculations.sh
+```
+**Step 3: Add A Shebang in the file**
+- Open the file with your choosen editor
+```
+vim calculations.sh
+```
+- For the system to know to run your file as a program, it must have a `shebang`.
+```
+#! /usr/bin/bash
+```
+**Step 4: Create your files**
+```
+#! /usr/bin/bash
+
+# Define two variables
+NUM1=10
+NUM2=5
+```
+**Step 5: Perform Arithmetic Operations**
+```
+#! /usr/bin/bash
+
+# Define two variables
+NUM1=10
+NUM2=5
+
+# Create variables for arithmetic operations
+SUM=$((NUM1 + NUM2))
+DIFFERENCE=$((NUM1 - NUM2))
+PRODUCT=$((NUM1 * NUM2))
+DIVISION=$((NUM1 / NUM2))
+REMAINDER=$((NUM1 % NUM2))
+```
+**Step 6: Display Results**
+```
+#! /usr/bin/bash
+
+# Define two variables
+NUM1=10
+NUM2=5
+
+# Create variables for arithmetic operations
+SUM=$((NUM1 + NUM2))
+DIFFERENCE=$((NUM1 - NUM2))
+PRODUCT=$((NUM1 * NUM2))
+DIVISION=$((NUM1 / NUM2))
+REMAINDER=$((NUM1 % NUM2))
+
+#Display results
+echo "Number 1: $NUM1"
+echo "Number 2: $NUM2"
+echo " "
+echo "Sum: $SUM"
+echo "Difference = $DIFFERENCE"
+echo "Product = $PRODUCT"
+echo "Remainder = $REMAINDER"
+```
+**Step 7: Perform Complex Arithmethic**
+```
+#! /usr/bin/bash
+
+# Define two variables
+NUM1=10
+NUM2=5
+
+# Create variables for arithmetic operations
+SUM=$((NUM1 + NUM2))
+DIFFERENCE=$((NUM1 - NUM2))
+PRODUCT=$((NUM1 * NUM2))
+DIVISION=$((NUM1 / NUM2))
+REMAINDER=$((NUM1 % NUM2))
+
+#Display results
+echo "Number 1: $NUM1"
+echo "Number 2: $NUM2"
+echo " "
+echo "Sum: $SUM"
+echo "Difference = $DIFFERENCE"
+echo "Product = $PRODUCT"
+echo "Remainder = $REMAINDER"
+
+# Perform some more complex calculations
+power_of_2=$((num1 ** 2))
+square_root=$(echo "sqrt($num2)" | bc)
+
+# Display the results
+echo " "
+echo "Number 1 raised to the power of 2: $power_of_2"
+echo "Square root of number 2: $square_root"
+```
+**Step 8: Run your file**
+```
+./calculations.sh
+```
+
+![Alt text](calculations.png)
+
+
+
+
+
+
 
 
 
