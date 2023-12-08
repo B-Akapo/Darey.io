@@ -15,11 +15,11 @@ Client-server architecture operates on a fundamental principle: enabling communi
 - **Response Transmission:** The server sends back the requested data or performs the requested action.
 - **Client-Side Handling:** Clients receive the response and utilize the provided data or services as needed.
 
-![Alt text](archi1)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project6-client-server-architecture/images/archi1.png)
 
 It is interesting to note, that in the client-server architecture you can also add a Database Server. Let quickly look at a diagram
 
-![Alt text](archi2)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project6-client-server-architecture/images/archi2.png)
 
 In the diagram above, 
 
@@ -42,7 +42,8 @@ For this project we will be setting up two EC2 Instances. Lets call the first se
 
 When you are done, you servers should look like this:
 
-![Alt text](ec2.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project6-client-server-architecture/images/ec2.png)
+
 # Installing MySQL Server Software
 On the `mysql_server`, we are going to install MySQL Server Software. MySQL is a Relational Database Management System (RDBMS) that allows you to store and manage data for your server/site. If you dont know how to install MySQL, you can find a detailed step-by-step guide [here](https://github.com/B-Akapo/Darey.io/tree/main/project3-deploying_A_LAMP_Application#installing-mysql)
 
@@ -65,7 +66,7 @@ sudo apt upgrade
 sudo apt install mysql-client
 ```
 
-![Alt text](client-server.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project6-client-server-architecture/images/client-server.png)
 
 # Open TCP Port 3306
 Your two EC2 servers talk to each other using local IP addresses. To connect from mysql_client to mysql_server, use mysql_server's local IP address. For this to work, open TCP port 3306 in 'mysql_server' Security Groups. To enhance security, limit access to 'mysql_server' by specifying only the local IP address of 'mysql_client'.
@@ -75,11 +76,11 @@ Your two EC2 servers talk to each other using local IP addresses. To connect fro
 - Ensure you select `mysql_server`
 - Click on security and then "security group". Please make sure you select the right instance
 
-![Alt text](security-group.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project6-client-server-architecture/images/security-group.png)
 
 - In the "Security" page click on "Edit inbound rules"
 
-![Alt text](inbound-rules.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project6-client-server-architecture/images/inbound-rules.png)
 
 - click on "Add rule" set up the following:
 
@@ -91,9 +92,9 @@ Your two EC2 servers talk to each other using local IP addresses. To connect fro
 
   d. set source to <the private IP address of `mysql_client`>/32. You can find this on the instance dashboard
 
-![Alt text](private-ip.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project6-client-server-architecture/images/private-ip.png)
 
-![Alt text](new-inbound.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project6-client-server-architecture/images/new-inbound.png)
 
   e. save rules
 
@@ -106,9 +107,9 @@ sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
 You can use the editor of your choice. I am using `vi`. 
 - Replace ‘127.0.0.1’ to ‘0.0.0.0’. To do this in `vi`, Hit `Esc key` and the type `i`. This will take you to the insert mode where you can edit.
 
-![Alt text](no-change.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project6-client-server-architecture/images/no-change.png)
 
-![Alt text](change.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project6-client-server-architecture/images/change.png)
 
 - When done editing, Hit `Esc` again then Type `:wq` and hitting `ENTER`. Not sure how exit vi watch this [video](https://www.youtube.com/watch?v=KwCvEVblJl8)
 
