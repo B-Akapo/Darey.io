@@ -113,6 +113,45 @@ You can use the editor of your choice. I am using `vi`.
 
 - When done editing, Hit `Esc` again then Type `:wq` and hitting `ENTER`. Not sure how exit vi watch this [video](https://www.youtube.com/watch?v=KwCvEVblJl8)
 
+# Connect The Client Server. 
+Alright. our servers are up, our permissions set, lets now conntect to `mysql_server` without using ssh. It is simple to do. 
+- First lets ping our server to see if we can connect
+```
+ping 172.31.29.148
+```
+Note: Replace the IP address with your own `mysql_server` IP. which you can find on you AWS console or by running the command `hostname -I`
+
+- You should see that you client server can connect to your server. If you get an error try checking your IP address. or running an error log on your `mysql_server` to see what is going on. Use the command `sudo tail -f /var/log/auth.log`
+
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project6-client-server-architecture/images/ping.png)
+
+- On `mysql_client`, run the following command
+```
+mysql -u devops -h 172.31.29.148 -p
+```
+or
+```
+mysql -u devops -h 172.31.29.148 -p name_database
+```
+NOTE: The IP address is the private IP of your `mysql_server` 
+
+- You shoud be able to connect to you server database. To test, on the MySQL console run the command
+```
+SHOW DATABASES;
+```
+- And you should see your database right there. in my own case it is called `name_database`
+
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project6-client-server-architecture/images/client-access.png)
+
+- To see your tables, you canrun the following command on your MySQL console
+```
+SHOW TABLES;
+```
+Well done, you can now connect form your client server to your server database. 
+
+
+
+
 
 
 
