@@ -1,3 +1,18 @@
+## Table of Contents
+
+1. [Introduction To Client-Server Architecture](https://github.com/B-Akapo/Darey.io/tree/main/project6-client-server-architecture#introduction-to-client-server-architecture)
+2. [How It Works](https://github.com/B-Akapo/Darey.io/tree/main/project6-client-server-architecture#how-it-works)
+3. [Key Components Of A Client-Server Architecture](https://github.com/B-Akapo/Darey.io/tree/main/project6-client-server-architecture#key-components-of-a-client-server-architecture)
+4. [Getting Started With AWS](https://github.com/B-Akapo/Darey.io/tree/main/project6-client-server-architecture#getting-started-with-aws)
+5. [Setting Up An EC2 Instance](https://github.com/B-Akapo/Darey.io/tree/main/project6-client-server-architecture#setting-up-an-ec2-instance)
+6. [Installing MySQL Server Software](https://github.com/B-Akapo/Darey.io/tree/main/project6-client-server-architecture#installing-mysql-server-software)
+7. [Create New User and Give Privileges](https://github.com/B-Akapo/Darey.io/tree/main/project6-client-server-architecture#create-new-user-and-give-privileges)
+8. [Installing MySQL Client Software](https://github.com/B-Akapo/Darey.io/tree/main/project6-client-server-architecture#installing-mysql-client-software)
+9. [Open TCP Port 3306](https://github.com/B-Akapo/Darey.io/tree/main/project6-client-server-architecture#open-tcp-port-3306)
+10. [Configure MySQL Server](https://github.com/B-Akapo/Darey.io/tree/main/project6-client-server-architecture#configure-mysql-server)
+11. [Connect The Client Server](https://github.com/B-Akapo/Darey.io/tree/main/project6-client-server-architecture#connect-the-client-server)
+#
+
 # Introduction To Client-Server Architecture 
 Client-server architecture is a foundational concept in modern computing, defining the relationship and interaction between devices on a network. At its core, this architecture model involves two primary entities: clients, which request services or resources, and servers, which provide these services or resources.
 
