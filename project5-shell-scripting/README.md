@@ -1,3 +1,15 @@
+## Table of Contents
+
+1. [Introduction](https://github.com/B-Akapo/Darey.io/tree/main/project5-shell-scripting#introduction)
+2. [What is Shell Scripting?](https://github.com/B-Akapo/Darey.io/tree/main/project5-shell-scripting#what-is-shell-scripting)
+3. [Why Use Shell Scripts?](https://github.com/B-Akapo/Darey.io/tree/main/project5-shell-scripting#why-use-shell-scripts)
+4. [Writing Your First Script](https://github.com/B-Akapo/Darey.io/tree/main/project5-shell-scripting#writing-your-first-script)
+5. [Directory Manipulation and Navigation](https://github.com/B-Akapo/Darey.io/tree/main/project5-shell-scripting#directory-manipulation-and-navigation)
+6. [File Operations And Sorting](https://github.com/B-Akapo/Darey.io/tree/main/project5-shell-scripting#file-operations-and-sorting)
+7. [Working With Numbers And Calculations](https://github.com/B-Akapo/Darey.io/tree/main/project5-shell-scripting#working-with-numbers-and-calculations)
+8. [File Backup And Time Stamping](https://github.com/B-Akapo/Darey.io/tree/main/project5-shell-scripting#file-backup-and-time-stamping)
+#
+
 # Introduction
 In the world of computing, efficiency is key. Enter shell scripting—a powerful toolset that unlocks the potential of the command line interface. If you're new to shell scripting, you're about to discover a world where automation and customization reign supreme.
 
