@@ -1,3 +1,14 @@
+# Table of Contents
+
+1. [Introduction to LEMP Stack](https://github.com/B-Akapo/Darey.io/tree/main/project4-deploying-LEMP-Application#introduction-to-lemp-stack)
+2. [Getting Started With AWS](https://github.com/B-Akapo/Darey.io/tree/main/project4-deploying-LEMP-Application#getting-started-with-aws)
+3. [Installing Nginx](https://github.com/B-Akapo/Darey.io/tree/main/project4-deploying-LEMP-Application#installing-nginx)
+4. [Installing MySQL](https://github.com/B-Akapo/Darey.io/tree/main/project4-deploying-LEMP-Application#installing-mysql)
+5. [Installing PHP](https://github.com/B-Akapo/Darey.io/tree/main/project4-deploying-LEMP-Application#installing-php)
+    - [Configure Nginx to Process PHP](https://github.com/B-Akapo/Darey.io/tree/main/project4-deploying-LEMP-Application#configure-nginx-to-process-php)
+    - [Testing PHP With Nginx](https://github.com/B-Akapo/Darey.io/tree/main/project4-deploying-LEMP-Application#testing-php-with-nginx)
+6. [Retrieving Data From MySQL Database Using PHP](https://github.com/B-Akapo/Darey.io/tree/main/project4-deploying-LEMP-Application#retrieving-data-from-mysql-database-using-php)
+
 # Introduction to LEMP Stack
 
 Now that we have finished with our [LAMP Stack](https://github.com/B-Akapo/Darey.io/tree/main/project3-deploying_A_LAMP_Application), let us see how to deply a web application using the LEMP Stack. 
@@ -179,7 +190,7 @@ As a web server, Apache incorporates a PHP interpreter directly into its archite
 ```
 sudo apt install php-fpm php-mysql
 ```
-![Alt text]([install-php](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/install-php.png))
+![Alt text]([install-php](https://github.com/B-Akapo/Darey.io/blob/main/project4-deploying-LEMP-Application/images/install-php.png)
 
 # Configure Nginx to Process PHP
 Server blocks in Nginx serve a role akin to Apache's virtual hosts. They enable the configuration of multiple websites or applications on a single Nginx instance, allowing distinct sites to coexist and function independently. Let's begin.
