@@ -191,7 +191,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install nginx
 ```
 
-![Alt text](install-nginx.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project7-loadbalancing-nginx/images/install-nginx.png)
 
 **Step 3: Check Nginx Service Status**
 - To confirm that Apache is running as a service
@@ -200,7 +200,7 @@ sudo systemctl status nginx
 ```
 Once you see green and active, you are good to go. 
 
-![Alt text](nginx-status.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project7-loadbalancing-nginx/images/nginx-status.png)
 
 # Configuring Nginx To Act As A Loadbalancer
 - Open Nginx configuration file
@@ -231,7 +231,7 @@ server {
 }
 ```
 
-![Alt text](loadbalance-config.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project7-loadbalancing-nginx/images/loadbalance-config.png)
     
 - Save your file and exit
 
@@ -242,7 +242,7 @@ sudo nginx -t
 ```
 Generally it should be okay. But if it isn't check the error message to see the line of code that has an issue
 
-![Alt text](test-config.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project7-loadbalancing-nginx/images/test-config.png)
 
 - If there is no error, you need to restart your nginx service.
 ```
@@ -256,9 +256,9 @@ http://16.16.186.103:80
 ```
 What should happen is that you should see your loadbalancer switching between your servers. If you check the screen you should see both IP addresses changing. If you are not seeing it, do a hard reset `SHIFT + Left click mouse`
 
-![Alt text](loadbalancer1.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project7-loadbalancing-nginx/images/loadbalancer1.png)
 
-![Alt text](loadbalancer2.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project7-loadbalancing-nginx/images/loadbalancer2.png)
 
 Nginx operates as a load balancer by distributing incoming web traffic across multiple servers. The screenshots display the IP addresses of `server_one` and `server_two`. When you repeatedly refresh or reload the page, Nginx dynamically switches the requests between these servers. This seamless switching demonstrates how Nginx effectively balances the load by evenly distributing incoming requests among the available servers. Essentially, it acts as a traffic manager, optimizing performance and ensuring efficient resource utilization across the server pool.
 
