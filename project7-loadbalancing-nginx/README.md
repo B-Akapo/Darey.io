@@ -1,3 +1,18 @@
+# Table Of Content
+# Table of Contents
+
+1. [**Introduction to Load Balancing with Nginx**](https://github.com/B-Akapo/Darey.io/blob/main/project7-loadbalancing-nginx/README.md#introduction-to-load-balancing-with-nginx)
+2. [**Getting Started**](https://github.com/B-Akapo/Darey.io/blob/main/project7-loadbalancing-nginx/README.md#getting-started-with-aws)
+3. [**Setting Up An EC2 Instance**](https://github.com/B-Akapo/Darey.io/blob/main/project7-loadbalancing-nginx/README.md#setting-up-an-ec2-instance)
+    - [Open Port 8000](https://github.com/B-Akapo/Darey.io/blob/main/project7-loadbalancing-nginx/README.md#open-port-8000)
+    - [Connecting To Your EC2 Instance From Your Local Machine](https://github.com/B-Akapo/Darey.io/blob/main/project7-loadbalancing-nginx/README.md#connecting-to-your-ec2-instance-from-your-local-machine)
+4. [**Installing Apache Webserver**](https://github.com/B-Akapo/Darey.io/blob/main/project7-loadbalancing-nginx/README.md#installing-apache-webserver)
+5. [**Provisioning Nginx Server**](https://github.com/B-Akapo/Darey.io/blob/main/project7-loadbalancing-nginx/README.md#provisioning-nginx-server)
+    - [Opening Port 80](https://github.com/B-Akapo/Darey.io/blob/main/project7-loadbalancing-nginx/README.md#open-port-80)
+    - [Installing Nginx](https://github.com/B-Akapo/Darey.io/blob/main/project7-loadbalancing-nginx/README.md#installing-nginx)
+6. [**Configuring Nginx as a Load Balancer**](https://github.com/B-Akapo/Darey.io/blob/main/project7-loadbalancing-nginx/README.md#configuring-nginx-to-act-as-a-loadbalancer)
+    - [Testing Nginx Load Balancer Setup](https://github.com/B-Akapo/Darey.io/blob/main/project7-loadbalancing-nginx/README.md#restart-nginx)
+#
 # Introduction to Load Balancing with Nginx
 
 Load balancing, a fundamental concept in modern web architectures, involves distributing incoming network traffic across multiple servers to prevent any single server from becoming overloaded. This technique optimizes resource utilization, minimizes response times, and enhances system reliability and scalability.
