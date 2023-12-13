@@ -1,5 +1,17 @@
-# Introduction
+# Table of Contents
+1. [Introduction](https://github.com/B-Akapo/Darey.io/blob/main/project8-automating-loadbalancing/README.md#introduction)
+2. [Getting Started With AWS](https://github.com/B-Akapo/Darey.io/blob/main/project8-automating-loadbalancing/README.md#getting-started-with-aws)
+3. [Setting Up An EC2 Instance](https://github.com/B-Akapo/Darey.io/blob/main/project8-automating-loadbalancing/README.md#setting-up-an-ec2-instance)
+   - [Open Port 8000](https://github.com/B-Akapo/Darey.io/blob/main/project8-automating-loadbalancing/README.md#open-port-8000)
+   - [Connecting To Your EC2 Instance From Your Local Machine](https://github.com/B-Akapo/Darey.io/blob/main/project8-automating-loadbalancing/README.md#connecting-to-your-ec2-instance-from-your-local-machine)
+4. [Creating The Apache Automation Script](https://github.com/B-Akapo/Darey.io/blob/main/project8-automating-loadbalancing/README.md#creating-the-apache-automation-script)
+5. [Provisioning Nginx Server](https://github.com/B-Akapo/Darey.io/blob/main/project8-automating-loadbalancing/README.md#provisioning-nginx-server)
+   - [Open Port 80](https://github.com/B-Akapo/Darey.io/blob/main/project8-automating-loadbalancing/README.md#open-port-80)
+6. [Creating The Nginx Loadbalancing Automation Script](https://github.com/B-Akapo/Darey.io/blob/main/project8-automating-loadbalancing/README.md#creating-the-nginx-loadbalancing-automation-script)
 
+#
+
+# Introduction
 Load balancing is a critical aspect of managing modern computing environments, ensuring efficient distribution of incoming network traffic across multiple servers or resources. It plays a pivotal role in optimizing performance, reliability, and scalability of systems by preventing any single server from being overwhelmed, thus enhancing overall user experience.
 
 For DevOps Engineers, automating the load balancing process is a fundamental practice. Automation streamlines the setup, configuration, and maintenance of load balancers, reducing manual intervention and enabling swift, consistent deployments. This approach allows for dynamic adjustments in response to changing demands, ensuring systems can adapt effectively to varying traffic patterns and server loads. Automating load balancing is key to achieving resilience, scalability, and agility in complex and dynamic environments, making it an indispensable element of modern DevOps practices.
@@ -34,7 +46,7 @@ sudo vi install.sh
 ```
 - copy the code below and paste in your editor. remember to edit to fit you IP addresses. Just like I have pointed in the image below. To get you IP run the command `curl ifconfig.me`
 
-![Alt text](scritpt-server1.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project8-automating-loadbalancing/images/scritpt-server1.png)
 
 ```
 #!/bin/bash
@@ -93,7 +105,7 @@ sudo chmod +x install.sh
 ```
 If all goes well, you should have something like the screen below
 
-![Alt text](run-apache-script.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project8-automating-loadbalancing/images/run-apache-script.png)
 
 Great!!! Now do the exact same thing for `server_two`
 
@@ -120,7 +132,7 @@ sudo vi nginx.sh
 ```
 - copy the code below and paste in your editor. remember to edit to fit you IP addresses. Just like I have pointed in the image below. To get you IP run the command `curl ifconfig.me`
 
-![Alt text](nginx-script.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project8-automating-loadbalancing/images/nginx-script.png)
 
 ```
 #!/bin/bash
@@ -195,7 +207,7 @@ sudo chmod +x nginx.sh
 ```
 If all goes well, you should have something like the screen below
 
-![Alt text](nginx.png)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project8-automating-loadbalancing/images/nginx.png)
 
 **Step 4: Nginx On Browser**
 - now copy your your Nginx server IP on your browser. Remember it is on Port 80
@@ -204,9 +216,9 @@ http://13.53.176.62:80
 ```
 - What should happen is that you should see your loadbalancer switching between your servers. If you check the screen you should see both IP addresses changing. If you are not seeing it, do a hard reset `SHIFT + Left click mouse`
 
-![Alt text](1)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project8-automating-loadbalancing/images/1.png)
 
-![Alt text](2)
+![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project8-automating-loadbalancing/images/2.png)
 
 Fantastic, now we have automated our loadbalancing. 
 
