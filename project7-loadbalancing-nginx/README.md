@@ -12,7 +12,7 @@ Fantastic now lets get started with our project
 If you don't have an AWS account, you'll need to [sign up](https://aws.amazon.com/free/) to access their services. However, if you already have an account, you can skip this step and proceed.
 
 # Setting Up An EC2 Instance
-For this project we will be setting up two EC2 Instances. Lets call the first server **"server_one"** and the second one **"server_two"**. If you dont know how to set up and EC2 instance, you can learn [here](https://github.com/B-Akapo/Darey.io/tree/main/project3-deploying_A_LAMP_Application#setting-up-an-ec2-instance). You can also learn how to connect to your server on your local machine [here](https://github.com/B-Akapo/Darey.io/tree/main/project3-deploying_A_LAMP_Application#connecting-to-your-ec2-instance-from-your-local-machine)
+For this project we will be setting up two EC2 Instances. Lets call the first server **"server_one"** and the second one **"server_two"**. If you dont know how to set up and EC2 instance, you can learn [here](https://github.com/B-Akapo/Darey.io/tree/main/project3-deploying_A_LAMP_Application#setting-up-an-ec2-instance).
 
 When you are done, you servers should look like this:
 
@@ -50,7 +50,7 @@ We're planning to have our servers operating on port 8000, with port 80 dedicate
 Now do the same for `server_two`. Remember to select it instead of `server_one`
 
 # Connecting To Your EC2 Instance From Your Local Machine
-Connecting to your EC2 from you local machine is easy. I have a detailde guide you can find [here](https://github.com/B-Akapo/Darey.io/tree/main/project3-deploying_A_LAMP_Application#connecting-to-your-ec2-instance-from-your-local-machine)
+Connecting to your EC2 from you local machine is easy. I have a detailed guide you can find [here](https://github.com/B-Akapo/Darey.io/tree/main/project3-deploying_A_LAMP_Application#connecting-to-your-ec2-instance-from-your-local-machine). 
 
 # Installing Apache Webserver
 Now that we have our servers running both on the cloud and our local machine, let is install Apache on both servers. 
@@ -171,6 +171,104 @@ You should see our index.html file.
 ![Alt text](https://github.com/B-Akapo/Darey.io/blob/main/project7-loadbalancing-nginx/images/apache1.png)
 
 **Now do steps 1 - 8 for** `server_two`
+
+# Provisioning Nginx Server
+- Next we a going to provision and EC2 instance for the Nginx server to act as the loadbalancer. Lets call it `nginx_server`. To do this, simply follow the same guide [here](https://github.com/B-Akapo/Darey.io/tree/main/project3-deploying_A_LAMP_Application#setting-up-an-ec2-instance).
+
+# Open Port 80
+Jus like before we will open a port but this time it is port 80 and NOT 8000. Follow the same steps [here](https://github.com/B-Akapo/Darey.io/tree/main/project7-loadbalancing-nginx#open-port-8000)
+
+# Installing Nginx
+**Step 1: Update and Upgrade Package Lists**
+- Update the package lists to ensure you have the latest information about available packages
+```
+sudo apt update && sudo apt upgrade -y
+```
+
+**Step 2: Install Nginx**
+- Install the Nginx package using `apt`
+```
+sudo apt install nginx
+```
+
+![Alt text](install-nginx.png)
+
+**Step 3: Check Nginx Service Status**
+- To confirm that Apache is running as a service
+```
+sudo systemctl status nginx
+```
+Once you see green and active, you are good to go. 
+
+![Alt text](nginx-status.png)
+
+# Configuring Nginx To Act As A Loadbalancer
+- Open Nginx configuration file
+```
+sudo vi /etc/nginx/conf.d/loadbalancer.conf
+```
+- Copy and paste the code below into your editor. Remember to change the IP adress to your server IPs (like I did in the image below). You can use `curl ifconfig.me` to get your IP addresses.
+```
+upstream backend_servers {
+
+        # your are to replace the public IP and Port to that of your webservers
+        server 127.0.0.1:8000; # public IP and port for webserser 1
+        server 127.0.0.1:8000; # public IP and port for webserver 2
+}
+
+server {
+
+        listen 80;
+        server_name <your load balancer's public IP addres>; # provide your load balancers public IP address
+
+        location / {
+
+                proxy_pass http://backend_servers;
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        }
+}
+```
+
+![Alt text](loadbalance-config.png)
+    
+- Save your file and exit
+
+# Restart Nginx
+- First make sure your config file is error proof run the command
+```
+sudo nginx -t
+```
+Generally it should be okay. But if it isn't check the error message to see the line of code that has an issue
+
+![Alt text](test-config.png)
+
+- If there is no error, you need to restart your nginx service.
+```
+sudo systemctl restart nginx
+```
+
+# Nginx On Browser
+- now copy your your Nginx server IP on your browser. Remember it is on Port 80
+```
+http://16.16.186.103:80
+```
+What should happen is that you should see your loadbalancer switching between your servers. If you check the screen you should see both IP addresses changing. If you are not seeing it, do a hard reset `SHIFT + Left click mouse`
+
+![Alt text](loadbalancer1.png)
+
+![Alt text](loadbalancer2.png)
+
+Nginx operates as a load balancer by distributing incoming web traffic across multiple servers. The screenshots display the IP addresses of `server_one` and `server_two`. When you repeatedly refresh or reload the page, Nginx dynamically switches the requests between these servers. This seamless switching demonstrates how Nginx effectively balances the load by evenly distributing incoming requests among the available servers. Essentially, it acts as a traffic manager, optimizing performance and ensuring efficient resource utilization across the server pool.
+
+
+
+
+
+
+
+
 
 
 
